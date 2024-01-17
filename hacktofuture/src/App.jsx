@@ -1,6 +1,7 @@
 import "./App.css";
-import About from "./components/About";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
 
 function App() {
   const Eg = "EG";
@@ -14,11 +15,8 @@ function App() {
 
   return (
     <>
+       <Hero />
       <Header />
-      <div className="flex flex-col sm:flex-row justify-center">
-        <About title={Eg} info={EgInfo} Vission={Vission} Mission={Mission} Img="/eg-logo.svg"/>
-        <About title={Sjec} info={SjecInfo} Img="/SJEC_logo_with_white_letter.png"/>
-      </div>
     </>
   );
 }

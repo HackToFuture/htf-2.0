@@ -13,3 +13,16 @@ body {
   min-height: 100vh;
   background-color: #0e1111;
 }
+
+#register {
+  background-image: linear-gradient(to right, #fca311, #ffd409);
+  border: 1px solid #ffd409;
+}
+
+#register:hover,
+#register:focus {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 1px solid #ffd409;
+}
