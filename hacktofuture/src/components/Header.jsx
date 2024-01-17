@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div
+    <header
       className="bg-bg_color bg-opacity-90 backdrop-blur-sm h-16 flex items-center"
       id="grad"
     >
@@ -33,7 +33,7 @@ const Header = () => {
           </a>
         </button>
       </nav>
-    </div>
+    </header>
   );
 };
 
