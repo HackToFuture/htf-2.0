@@ -1,0 +1,22 @@
+[
+    {
+      "question": "What is your name?",
+      "answer": "My name is GitHub Copilot."
+    },
+    {
+      "question": "What do you do?",
+      "answer": "I assist with programming tasks."
+    },
+    {
+      "question": "What is Git?",
+      "answer": "Git is a distributed version control system for tracking changes in source code during software development."
+    },
+    {
+      "question": "What is JavaScript?",
+      "answer": "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification."
+    },
+    {
+      "question": "What is React?",
+      "answer": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
+    }
+  ]

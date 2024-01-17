@@ -1,11 +1,7 @@
 import React from "react";
 
 const Hero = () => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: require("/public/lottie/laptopanimation.lottie"),
-  };
+  
 
   return (
     <section>
@@ -39,7 +35,7 @@ const Hero = () => {
           </div>
           <div class="p-8 mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3  justify-center">
             <div class="h-48 flex flex-wrap content-center">
-              <Lottie options={defaultOptions} height={400} width={400} />
+              
             </div>
           </div>
         </div>
