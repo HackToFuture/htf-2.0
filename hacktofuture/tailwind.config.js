@@ -5,4 +5,7 @@ export default {
     extend: {},
   },
   plugins: [],
+  colors: {
+    bg_color: "#0e1111",
+  }
 };

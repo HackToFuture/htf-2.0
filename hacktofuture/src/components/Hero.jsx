@@ -1,5 +1,5 @@
 import React from 'react'
-import "./src/App.css"
+
 
 const Hero = () => {
   return (
