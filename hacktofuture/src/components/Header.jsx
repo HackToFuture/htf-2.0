@@ -24,7 +24,10 @@ const Header = () => {
             <a href="#">FAQ</a>
           </li>
         </ul>
-        <button className=" bg-blue-700 hover:bg-blue-800 transition text-white font-semibold px-6 py-1 rounded-3xl mr-4">
+        <button
+          className="text-white font-bold  px-6 pb-2 pt-1 rounded-3xl mr-4"
+          id="register"
+        >
           <a
             href="https://tw-elements.com/docs/standard/navigation/headers/#!"
             target="_blank"
