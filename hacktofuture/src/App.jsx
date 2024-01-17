@@ -5,9 +5,11 @@ import Hero from "./components/Hero";
 
 function App() {
   return (
-    <>
+    <div id="bgimg">
+      <Header />
       <Hero />
-    </>
+      <Footer />
+    </div>
   );
 }
 

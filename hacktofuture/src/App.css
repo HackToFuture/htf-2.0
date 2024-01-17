@@ -26,3 +26,9 @@ body {
   -webkit-text-fill-color: transparent;
   border: 1px solid #ffd409;
 }
+
+#hammenu {
+  background-image: linear-gradient(to right, #fca311, #ffd409);
+  border: 1px solid #ffd409;
+  border-radius: 4px;
+}
