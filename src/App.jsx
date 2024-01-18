@@ -8,15 +8,16 @@ import Themes from "./components/Themes";
 
 function App() {
   return (
-<div id="bgimg">
+    <div id="bgimg">
       <Header />
       <Hero />
-      <div className="bg-bg_color flex flex-col sm:flex-row justify-center">
-        <About Id="1" Img="/src/assets/eg-logo.svg"/>
-        <About Id="0" Img="/src/assets/SJEC_logo_with_white_letter.png"/>
+      <Themes />
+      <div className=" flex flex-col sm:flex-row justify-center">
+        <About Id="1" Img="/src/assets/eg-logo.svg" />
+        <About Id="0" Img="/src/assets/SJEC_logo_with_white_letter.png" />
       </div>
       <Faq />
-      <Themes />
+
       <Footer />
     </div>
   );

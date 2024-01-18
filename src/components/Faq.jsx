@@ -5,7 +5,7 @@ const Faq = () => {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   return (
-    <div className="p-6 w-full bg-bg_color shadow-md flex flex-col items-start ">
+    <div className="p-6 w-full shadow-md flex flex-col items-start ">
       <div className="text-4xl text-center font-interbold bg-gradient-right bg-clip-text text-transparent mx-auto">
         Queries? Quick Fixes Here!
       </div>
