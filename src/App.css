@@ -31,7 +31,7 @@ html,
 body {
   min-height: 100vh;
   background-color: #0e1111;
-  background-size: 120px 120px;
+  background-size: 101px 101px;
   background-image: linear-gradient(to right, #515151 1px, transparent 1px),
     linear-gradient(to bottom, #515151 1px, transparent 1px);
 }
