@@ -11,7 +11,7 @@ function App() {
 <div id="bgimg">
       <Header />
       <Hero />
-      <div className="bg-black flex flex-col sm:flex-row justify-center">
+      <div className="bg-bg_color flex flex-col sm:flex-row justify-center">
         <About Id="1" Img="/src/assets/eg-logo.svg"/>
         <About Id="0" Img="/src/assets/SJEC_logo_with_white_letter.png"/>
       </div>
