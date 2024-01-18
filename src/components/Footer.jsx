@@ -13,8 +13,7 @@ const Footer = () => {
         <img
           src="src/assets/htf-logo.png"
           alt="htf logo"
-          className=" aspect-auto w-14 sm:w-16 mr-
-          6"
+          className=" aspect-auto w-14 sm:w-16 mr-6"
         />
       </div>
     </footer>

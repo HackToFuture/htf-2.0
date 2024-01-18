@@ -4,6 +4,7 @@ import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Prize from "./components/Prize";
 import Themes from "./components/Themes";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <div id="bgimg">
       <Header />
       <Hero />
+      <Prize />
       <Themes />
       <div className=" flex flex-col sm:flex-row justify-center">
         <About Id="1" Img="/src/assets/eg-logo.svg" />

@@ -2,8 +2,8 @@ import React from "react";
 
 const Themes = () => {
   return (
-    <div className="h-auto lg:mx-32 mb-20 text-text_col_1 text-base leading-tight font-intermed">
-      <div className="bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
+    <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-base leading-tight font-intermed">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center">
         <img
           src="public/vite.svg"
           alt="themelogo"
@@ -22,7 +22,7 @@ const Themes = () => {
           </p>
         </div>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
         <div>
           <h2 className="text-xl ml-4 font-interbold bg-gradient-right bg-clip-text text-transparent">
             Problem Statement 2
@@ -40,7 +40,7 @@ const Themes = () => {
           className=" aspect-auto w-24 flex-shrink-0 px-4"
         />
       </div>
-      <div className="bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
         <img
           src="public/vite.svg"
           alt="themelogo"

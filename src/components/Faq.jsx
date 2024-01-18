@@ -13,7 +13,7 @@ const Faq = () => {
         {faqData.map((faq, index) => (
           <div key={index} className="w-full mb-4">
             <button
-              className={`transition bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 py-2 px-7 text-lg font-intermed leading-tight text-text_col_1 w-full text-left flex justify-between items-center ${
+              className={`transition bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 py-2 px-7 text-lg font-intermed leading-tight text-text_col_1 w-full text-left flex justify-between items-center ${
                 selectedQuestion === index
                   ? "rounded-t-xl rounded-b-none"
                   : "rounded-xl"

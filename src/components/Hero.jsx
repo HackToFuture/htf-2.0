@@ -18,14 +18,16 @@ const Hero = () => {
 
   return (
     <section>
-      <div className="py-5">
-        <div className=" container mx-auto flex flex-col md:flex-row items-center my-12 md:my-24">
-          <div className="flex flex-col w-full bg-bg_color_2 bg-opacity-10 backdrop-blur-blur1 rounded-xl lg:w-4/5 ml-6  justify-center items-start p-8">
-            <img
-              src="/src/assets/htf-logo.png"
-              alt="htf logo"
-              className="aspect-auto w-11/12 lg:w-4/5 mb-5 lg:ml-16 ml-3"
-            />
+      <div className="py-20 md:py-20">
+        <div className=" container flex flex-col md:flex-row items-center px-5 md:px-0 my-8">
+          <div className="flex flex-col bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl lg:w-4/5 mx-1 md:mx-7 py-10 p-6 md:p-10 justify-center items-start">
+            <div className="flex flex-shrink-0 justify-center w-full md:w-auto mb-10">
+              <img
+                src="/src/assets/htf-logo.png"
+                alt="htf logo"
+                className="aspect-auto w-11/12 lg:w-4/5"
+              />
+            </div>
             <p className="text-base md:text-lg text-text_col_1 mb-4 leading-tight md:leading-tight font-intermed">
               HackToFuture is a 36 hour long hackathon, running from 19-21
               February. Whether you are a seasoned professional or a newcomer to

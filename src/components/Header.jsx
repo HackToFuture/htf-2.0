@@ -24,10 +24,7 @@ const Header = () => {
   };
 
   return (
-    <header
-      className="bg-bg_color bg-opacity-40 backdrop-blur-blur1 h-16 md:h-20 flex items-center fixed top-0 w-full font-intermed z-10"
-      id="grad"
-    >
+    <header className="bg-bg_color bg-opacity-40 backdrop-blur-blur1 h-16 md:h-20 flex items-center fixed top-0 w-full font-intermed z-10">
       {isMobile ? (
         <nav className="flex-grow flex justify-between items-center mr-6">
           <div className="flex-shrink-0 ml-8">
@@ -40,7 +37,7 @@ const Header = () => {
 
           <button
             onClick={handleClick}
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center mr-3"
           >
             <span
               className={`bg-white block transition-all duration-300 ease-out h-0.5 w-6 rounded-sm ${
