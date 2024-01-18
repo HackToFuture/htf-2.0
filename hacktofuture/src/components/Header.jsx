@@ -32,9 +32,9 @@ const Header = () => {
         <nav className="flex-grow flex justify-between items-center mr-6">
           <div className="flex-shrink-0 ml-8">
             <img
-              src="src/assets/sceptix-logo.png"
+              src="./src/assets/htf-logo.png"
               alt="logo"
-              className="aspect-auto w-10"
+              className="aspect-auto w-24"
             />
           </div>
 
@@ -65,9 +65,9 @@ const Header = () => {
         <nav className="flex-grow flex justify-between items-center ">
           <div className="flex-shrink-0 ml-8">
             <img
-              src="src/assets/sceptix-logo.png"
+              src="./src/assets/htf-logo.png"
               alt="logo"
-              className="aspect-auto w-16"
+              className="aspect-auto w-24"
             />
           </div>
           <ul className="flex justify-center text-md">
