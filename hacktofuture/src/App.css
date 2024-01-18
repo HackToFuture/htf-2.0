@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "interreg";
+  src: url("src/assets/fonts/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: "intermed";
+  src: url("src/assets/fonts/Inter-Medium.ttf");
+}
+
+@font-face {
+  font-family: "intersemi";
+  src: url("src/assets/fonts/Inter-SemiBold.ttf");
+}
+@font-face {
+  font-family: "interbold";
+  src: url("src/assets/fonts/Inter-Bold.ttf");
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -25,4 +44,10 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   border: 1px solid #ffd409;
+}
+
+#hammenu {
+  background-image: linear-gradient(to right, #fca311, #ffd409);
+  border: 1px solid #ffd409;
+  border-radius: 4px;
 }

@@ -7,8 +7,17 @@ export default {
         bg_color: "#0e1111",
         text_col_1: "#909090",
         orange1: "#fca311",
-        yellow: "#ffd409",
+        yellow1: "#ffd409",
       },
+      fontFamily: {
+        interreg: ["interreg", "sans-serif"],
+        intermed: ["intermed", "sans-serif"],
+        intersemi: ["intersemi", "sans-serif"],
+        interbold: ["interbold", "sans-serif"],
+      },
+      backgroundImage: (theme) => ({
+        "gradient-right": "linear-gradient(to right, #fca311, #ffd409)",
+      }),
     },
   },
   plugins: [],
