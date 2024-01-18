@@ -26,7 +26,7 @@ const Hero = () => {
               alt="htf logo"
               className=" aspect-auto w-80 lg:w-4/5"
             />
-            <p className=" text-base md:text-lg font-medium text-text_col_1 mb-4 leading-tight md:leading-tight">
+            <p className=" text-base md:text-lg font-medium text-text_col_1 mb-4 leading-tight md:leading-tight font-intermed">
               HackToFuture is a 36 hour long hackathon, running from 19-21
               February. Whether you are a seasoned professional or a newcomer to
               the tech world, HackToFuture is the perfect opportunity to
@@ -36,7 +36,7 @@ const Hero = () => {
               inspire you and propel you towards your goals!
             </p>
             <button
-              className="text-white text-xl font-bold px-10 pb-2 pt-1 rounded-3xl mr-4"
+              className="text-white text-xl font-bold px-10 pb-1 pt-1 rounded-3xl mr-4 font-interbold"
               id="register"
             >
               <a

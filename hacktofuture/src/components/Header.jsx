@@ -25,7 +25,7 @@ const Header = () => {
 
   return (
     <header
-      className="bg-bg_color bg-opacity-70 backdrop-blur-sm h-16 md:h-20 flex items-center fixed top-0 w-full"
+      className="bg-bg_color bg-opacity-70 backdrop-blur-sm h-16 md:h-20 flex items-center fixed top-0 w-full font-intersemi"
       id="grad"
     >
       {isMobile ? (

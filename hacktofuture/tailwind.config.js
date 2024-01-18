@@ -9,6 +9,15 @@ export default {
         orange1: "#fca311",
         yellow1: "#ffd409",
       },
+      fontFamily: {
+        interreg: ["interreg", "sans-serif"],
+        intermed: ["intermed", "sans-serif"],
+        intersemi: ["intersemi", "sans-serif"],
+        interbold: ["interbold", "sans-serif"],
+      },
+      backgroundImage: (theme) => ({
+        "gradient-right": "linear-gradient(to right, #fca311, #ffd409)",
+      }),
     },
   },
   plugins: [],
