@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         bg_color: "#0e1111",
-        text_col_1: "#909090",
+        bg_color_2: "#060707",
+        text_col_1: "#d3d3d3",
         orange1: "#fca311",
         yellow1: "#ffd409",
       },
@@ -18,6 +19,9 @@ export default {
       backgroundImage: (theme) => ({
         "gradient-right": "linear-gradient(to right, #fca311, #ffd409)",
       }),
+      backdropBlur: {
+        blur1: "2px",
+      },
     },
   },
   plugins: [],
