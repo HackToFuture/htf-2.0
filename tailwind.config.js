@@ -6,7 +6,7 @@ export default {
       colors: {
         bg_color: "#0e1111",
         bg_color_2: "#060707",
-        text_col_1: "#909090",
+        text_col_1: "#cccccc",
         orange1: "#fca311",
         yellow1: "#ffd409",
       },
