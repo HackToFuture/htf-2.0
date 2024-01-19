@@ -20,10 +20,11 @@ const Hero = () => {
     <section>
       <div className="py-20 md:py-20">
         <div className=" container flex flex-col md:flex-row items-center px-5 md:px-0 my-8">
-          <div className="flex flex-col bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl lg:w-4/5 mx-1 md:mx-7 py-10 p-6 md:p-10 justify-center items-start">
+          {/* might need to change md:w-96 later */}
+          <div className="flex flex-col bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl lg:w-4/5 mx-1 md:mx-7 md:w-96 py-10 p-6 md:p-10 justify-center items-start">
             <div className="flex flex-shrink-0 justify-center w-full md:w-auto mb-10">
               <img
-                src="/src/assets/htf-logo.png"
+                src="src/assets/hero-htf-main.svg"
                 alt="htf logo"
                 className="aspect-auto w-11/12 lg:w-4/5"
               />
@@ -37,20 +38,26 @@ const Hero = () => {
               <br /> Join us for an unforgettable 36-hour experience that will
               inspire you and propel you towards your goals!
             </p>
-            <button
-              className="text-white text-xl font-bold px-10 pb-1 pt-1 rounded-3xl mr-4 font-interbold"
+
+            <a
+              href="https://tw-elements.com/docs/standard/navigation/headers/#!"
+              target="_blank"
+              className="text-white text-xl font-bold px-12 py-2 my-3 rounded-3xl font-interbold"
               id="register"
             >
-              <a
-                href="https://tw-elements.com/docs/standard/navigation/headers/#!"
-                target="_blank"
-              >
-                Register
-              </a>
-            </button>
-          </div>
-          <div className="p-8 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-1/2 w-3/5 justify-center">
-            <img src="src/assets/hero-image.png" alt="hero image" />
+              <button>Register</button>
+            </a>
+          </div>{" "}
+          <div className="md:w-3/4">
+            <dotlottie-player
+              src="https://lottie.host/1983ae77-1eaf-40de-a80a-ffdd542071f1/mMjS3sCYL8.json"
+              background="transparent"
+              speed="1"
+              direction="1"
+              playMode="normal"
+              loop
+              autoplay
+            ></dotlottie-player>
           </div>
           <div>
             {isMobile && (

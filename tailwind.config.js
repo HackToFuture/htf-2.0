@@ -17,7 +17,7 @@ export default {
         interbold: ["interbold", "sans-serif"],
       },
       backgroundImage: (theme) => ({
-        "gradient-right": "linear-gradient(to right, #fca311, #ffd409)",
+        "gradient-right": "linear-gradient(to right, #008ed8, #4bbdfa)",
       }),
       backdropBlur: {
         blur1: "2px",

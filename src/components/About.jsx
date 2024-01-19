@@ -17,7 +17,7 @@ const About = ({ Id, Img }) => {
   return (
     <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 md:w-1/2 w-11/12 h-auto sm:mx-5 mx-auto md:mx-7 py-10 px-6 md:px-16 my-20 font-intermed leading-tight text-text_col_1 rounded-3xl">
       <img src={Img} alt="Logo" className="mx-auto w-48 h-48 mb-10" />
-      <p className="text-3xl md:text-4xl my-4 font-intersemi leading-tight ">
+      <p className="text-3xl md:text-4xl my-4 font-intersemi leading-tight bg-gradient-right bg-clip-text text-transparent">
         About {Id === "1" ? Eg : Sjec}
       </p>
       <p className="text-base md:text-lg leading-tight md:leading-tight">
@@ -33,11 +33,15 @@ const About = ({ Id, Img }) => {
           <br />
           <br />
           <p className="text-base md:text-lg leading-tight">
-            <span className="font-interbold text-lg md:text-xl">Vision:</span>{" "}
+            <span className="font-interbold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
+              Vision:
+            </span>{" "}
             {Vision}
           </p>
           <p className="text-base md:text-lg leading-tight">
-            <span className="font-interbold text-lg md:text-xl">Mission: </span>{" "}
+            <span className="font-interbold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
+              Mission:{" "}
+            </span>{" "}
             {Mission}
           </p>
         </>

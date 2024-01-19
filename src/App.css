@@ -37,8 +37,8 @@ body {
 }
 
 #register {
-  background-image: linear-gradient(to right, #fca311, #ffd409);
-  border: 1px solid #ffd409;
+  background-image: linear-gradient(to right, #008ed8, #4bbdfa);
+  border: 1px solid #008ed8;
 }
 
 #register:hover,
@@ -46,11 +46,11 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  border: 1px solid #ffd409;
+  border: 1px solid #008ed8;
 }
 
 #hammenu {
-  background-image: linear-gradient(to right, #fca311, #ffd409);
-  border: 1px solid #ffd409;
+  background-image: linear-gradient(to right, #008ed8, #4bbdfa);
+  border: 1px solid #008ed8;
   border-radius: 4px;
 }

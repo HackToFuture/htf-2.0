@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link, BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
+import { Link } from "react-scroll";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -62,24 +62,69 @@ const Header = () => {
       ) : (
         <nav className="flex-grow flex justify-between items-center ">
           <div className="flex-shrink-0 ml-8">
-            <img
-              src="./src/assets/htf-logo.png"
-              alt="logo"
-              className="aspect-auto w-24"
-            />
+            <Link
+              activeClass="active"
+              to="hero"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
+            >
+              <img
+                src="./src/assets/htf-logo.png"
+                alt="logo"
+                className="aspect-auto w-24"
+              />
+            </Link>
           </div>
           <ul className="flex justify-center text-md">
             <li className="text-white hover:text-text_col_1 transition px-8">
-              {/* <NavLink to="About">About</NavLink> */}
+              <Link
+                activeClass="active"
+                to="prize"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                Prizes
+              </Link>
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              {/* <NavLink to="Themes">Themes</NavLink> */}
+              <Link
+                activeClass="active"
+                to="theme"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                Themes
+              </Link>
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              {/* <NavLink to="Prizes">Prizes</NavLink> */}
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                About
+              </Link>
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              {/* <NavLink to="Faq">FAQ</NavLink> */}
+              <Link
+                activeClass="active"
+                to="faq"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                FAQ
+              </Link>
             </li>
           </ul>
 
@@ -94,36 +139,58 @@ const Header = () => {
               Register
             </a>
           </button>
-          {/*           <div className="flex mr-8 gap-6">
-            <a
-              href="https://www.linkedin.com/company/sceptix/"
-              className=" aspect-auto w-6 flex-shrink-0 "
-            >
-              <img src="src/assets/linkedin-32.png" alt="linkedin" />
-            </a>
-            <a
-              href="https://www.instagram.com/the_sceptix_club/"
-              className=" aspect-auto w-6 flex-shrink-0"
-            >
-              <img src="src/assets/instagram-white-icon.svg" alt="insta" />
-            </a>
-          </div> */}
         </nav>
       )}
       {isOpen && (
         <div className="fixed top-20 right-2 h-auto w-48 py-4" id="hammenu">
-          <ul className="flex flex-col text-lg items-center  font-intermed">
-            <li className="text-bg_color_1 hover:text-white transition px-8 ">
-              <a href="#">About</a>
+          <ul className="flex flex-col text-lg items-center  font-intermed text-text_col_1 ">
+            <li className="transition px-8 hover:text-black">
+              <Link
+                activeClass="active"
+                to="prize"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                Prizes
+              </Link>
             </li>
-            <li className="text-bg_color_1 hover:text-white transition px-8">
-              <a href="#">Theme</a>
+            <li className="transition px-8 hover:text-black">
+              <Link
+                activeClass="active"
+                to="theme"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                Themes
+              </Link>
             </li>
-            <li className="text-bg_color_1 hover:text-white transition px-8">
-              <a href="#">Prizes</a>
+            <li className="transition px-8 hover:text-black">
+              <Link
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                About
+              </Link>
             </li>
-            <li className="text-bg_color_1 hover:text-white transition px-8">
-              <a href="#">FAQ</a>
+            <li className="transition px-8 hover:text-black">
+              <Link
+                activeClass="active"
+                to="faq"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+              >
+                FAQ
+              </Link>
             </li>
           </ul>
           <div className=" h-16 flex items-center justify-center">
@@ -132,27 +199,13 @@ const Header = () => {
                 <a
                   href="https://tw-elements.com/docs/standard/navigation/headers/#!"
                   target="_blank"
-                  className="text-yellow1"
+                  className="text-text_col_1"
                 >
                   Register
                 </a>
               </button>
             </div>
           </div>
-          {/*           <div className="flex justify-evenly mt-5 ">
-            <a
-              href="https://www.linkedin.com/company/sceptix/"
-              className=" aspect-auto w-6 flex-shrink-0 "
-            >
-              <img src="src/assets/linkedin-32.png" alt="linkedin" />
-            </a>
-            <a
-              href="https://www.instagram.com/the_sceptix_club/"
-              className=" aspect-auto w-6 flex-shrink-0"
-            >
-              <img src="src/assets/instagram-white-icon.svg" alt="insta" />
-            </a>
-          </div> */}
         </div>
       )}
     </header>
