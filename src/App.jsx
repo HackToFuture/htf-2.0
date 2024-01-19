@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Prize from "./components/Prize";
 import Themes from "./components/Themes";
+import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
+import eglogo from "./assets/eg-logo.svg";
 
 const App = () => {
   return (
@@ -21,8 +23,8 @@ const App = () => {
         <Themes />
       </div>
       <div id="about" className=" flex flex-col sm:flex-row justify-center">
-        <About Id="1" Img="/src/assets/eg-logo.svg" />
-        <About Id="0" Img="/src/assets/SJEC_logo_with_white_letter.png" />
+        <About Id="1" Img={eglogo} />
+        <About Id="0" Img={sjeclogo} />
       </div>
       <div id="faq">
         <Faq />

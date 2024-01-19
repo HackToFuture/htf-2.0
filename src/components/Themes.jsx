@@ -1,11 +1,12 @@
 import React from "react";
+import themeimg from "../../public/vite.svg";
 
 const Themes = () => {
   return (
     <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-base leading-tight font-intermed">
       <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center">
         <img
-          src="public/vite.svg"
+          src={themeimg}
           alt="themelogo"
           className=" aspect-auto w-24 flex-shrink-0 px-4"
         />
@@ -35,14 +36,14 @@ const Themes = () => {
           </p>
         </div>
         <img
-          src="public/vite.svg"
+          src={themeimg}
           alt="themelogo"
           className=" aspect-auto w-24 flex-shrink-0 px-4"
         />
       </div>
       <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center ">
         <img
-          src="public/vite.svg"
+          src={themeimg}
           alt="themelogo"
           className=" aspect-auto w-24 flex-shrink-0 px-4"
         />

@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
+import htflogo from "../assets/hero-htf-main.svg";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -29,11 +30,7 @@ const Header = () => {
       {isMobile ? (
         <nav className="flex-grow flex justify-between items-center mr-6">
           <div className="flex-shrink-0 ml-8">
-            <img
-              src="./src/assets/htf-logo.png"
-              alt="logo"
-              className="aspect-auto w-24"
-            />
+            <img src={htflogo} alt="logo" className="aspect-auto w-24" />
           </div>
 
           <button
@@ -70,11 +67,7 @@ const Header = () => {
               offset={-30}
               duration={500}
             >
-              <img
-                src="/src/assets/hero-htf-main.svg"
-                alt="logo"
-                className="aspect-auto w-24"
-              />
+              <img src={htflogo} alt="logo" className="aspect-auto w-24" />
             </Link>
           </div>
           <ul className="flex justify-center text-md">

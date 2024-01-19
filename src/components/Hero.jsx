@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import htflogo from "../assets/hero-htf-main.svg";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -23,7 +24,7 @@ const Hero = () => {
         <div className="flex flex-col bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl lg:w-4/5 mx-1 md:mx-7 md:w-96 py-10 p-6 md:p-10 justify-center items-start">
           <div className="flex flex-shrink-0 justify-center w-full md:w-auto mb-10">
             <img
-              src="src/assets/hero-htf-main.svg"
+              src={htflogo}
               alt="htf logo"
               className="aspect-auto w-11/12 lg:w-4/5"
             />
