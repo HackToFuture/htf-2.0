@@ -15,9 +15,9 @@ const About = ({ Id, Img }) => {
     "The institution recently received an A+ grade from the National Assessment and Accreditation Council. The National Board of Accreditation, New Delhi, has also granted accreditation to the institution’s programs in CSE, ME, ECE, EEE, Civil engineering, and MBA. The sprawling lush green SJEC campus is located 10 Km away from the City of Mangalore and is known for its picturesque beauty. The campus is a hub for innovators and SJEC students have made a mark for themselves in national and international championships of repute.";
 
   return (
-    <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 md:w-1/2 w-11/12 h-auto sm:mx-5 mx-auto md:mx-7 py-10 px-6 md:px-16 my-20 font-intermed leading-tight text-text_col_1 rounded-3xl">
+    <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 md:w-1/2 w-11/12 h-auto sm:mx-5 mx-auto md:mx-7 py-10 px-6 md:px-16 my-20 font-inter font-medium leading-tight text-text_col_1 rounded-3xl">
       <img src={Img} alt="Logo" className="mx-auto w-48 h-48 mb-10" />
-      <p className="text-3xl md:text-4xl my-4 font-intersemi leading-tight bg-gradient-right bg-clip-text text-transparent">
+      <p className="text-3xl md:text-4xl my-4 font-inter font-bold leading-tight bg-gradient-right bg-clip-text text-transparent">
         About {Id === "1" ? Eg : Sjec}
       </p>
       <p className="text-base md:text-lg leading-tight md:leading-tight">
@@ -33,13 +33,13 @@ const About = ({ Id, Img }) => {
           <br />
           <br />
           <p className="text-base md:text-lg leading-tight">
-            <span className="font-interbold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
+            <span className="font-bold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
               Vision:
             </span>{" "}
             {Vision}
           </p>
           <p className="text-base md:text-lg leading-tight">
-            <span className="font-interbold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
+            <span className="font-bold text-lg md:text-xl bg-gradient-right bg-clip-text text-transparent">
               Mission:{" "}
             </span>{" "}
             {Mission}

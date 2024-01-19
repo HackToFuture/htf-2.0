@@ -1,8 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
+/* @font-face {
   font-family: "interreg";
   src: url("src/assets/fonts/Inter-Regular.ttf");
 }
@@ -19,7 +20,7 @@
 @font-face {
   font-family: "interbold";
   src: url("src/assets/fonts/Inter-Bold.ttf");
-}
+} */
 
 * {
   padding: 0;

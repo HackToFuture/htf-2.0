@@ -70,7 +70,7 @@ const Header = () => {
               <img src={htflogo} alt="logo" className="aspect-auto w-24" />
             </Link>
           </div>
-          <ul className="flex justify-center text-md">
+          <ul className="flex justify-center font-inter font-medium text-md">
             <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
@@ -136,7 +136,7 @@ const Header = () => {
       )}
       {isOpen && (
         <div className="fixed top-20 right-2 h-auto w-48 py-4" id="hammenu">
-          <ul className="flex flex-col text-lg items-center  font-intermed text-text_col_1 ">
+          <ul className="flex flex-col text-lg items-center font-inter font-medium text-text_col_1 ">
             <li className="transition px-8 hover:text-black">
               <Link
                 activeClass="active"
@@ -188,7 +188,7 @@ const Header = () => {
           </ul>
           <div className=" h-16 flex items-center justify-center">
             <div className="ml-5">
-              <button className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-interbold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
+              <button className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
                 <a
                   href="https://tw-elements.com/docs/standard/navigation/headers/#!"
                   target="_blank"

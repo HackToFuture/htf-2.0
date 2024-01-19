@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
@@ -12,10 +13,7 @@ export default {
         yellow1: "#ffd409",
       },
       fontFamily: {
-        interreg: ["interreg", "sans-serif"],
-        intermed: ["intermed", "sans-serif"],
-        intersemi: ["intersemi", "sans-serif"],
-        interbold: ["interbold", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
       },
       backgroundImage: (theme) => ({
         "gradient-right": "linear-gradient(to right, #008ed8, #4bbdfa)",

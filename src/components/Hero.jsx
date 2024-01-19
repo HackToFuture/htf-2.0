@@ -29,7 +29,7 @@ const Hero = () => {
               className="aspect-auto w-11/12 lg:w-4/5"
             />
           </div>
-          <p className="text-base md:text-lg text-text_col_1 mb-4 leading-tight md:leading-tight font-intermed">
+          <p className="text-base md:text-lg text-text_col_1 mb-4 leading-tight md:leading-tight font-inter font-medium">
             HackToFuture is a 36 hour long hackathon, running from 19-21
             February. Whether you are a seasoned professional or a newcomer to
             the tech world, HackToFuture is the perfect opportunity to showcase
