@@ -78,7 +78,7 @@ const Header = () => {
             </Link>
           </div>
           <ul className="flex justify-center text-md">
-            <li className="text-white hover:text-text_col_1 transition px-8">
+            <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
                 to="prize"
@@ -90,7 +90,7 @@ const Header = () => {
                 Prizes
               </Link>
             </li>
-            <li className="text-white hover:text-text_col_1 transition px-8">
+            <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
                 to="theme"
@@ -102,7 +102,7 @@ const Header = () => {
                 Themes
               </Link>
             </li>
-            <li className="text-white hover:text-text_col_1 transition px-8">
+            <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
                 to="about"
@@ -114,7 +114,7 @@ const Header = () => {
                 About
               </Link>
             </li>
-            <li className="text-white hover:text-text_col_1 transition px-8">
+            <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
                 to="faq"

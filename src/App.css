@@ -32,8 +32,33 @@ body {
   min-height: 100vh;
   background-color: #0e1111;
   background-size: 101px 101px;
-  background-image: linear-gradient(to right, #515151 1px, transparent 1px),
-    linear-gradient(to bottom, #515151 1px, transparent 1px);
+  background-image: linear-gradient(
+      to right,
+      hwb(201 54% 12% / 0.5) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, hwb(201 54% 12% / 0.5) 1px, transparent 1px);
+}
+
+@media (max-width: 800px) {
+  html,
+  body {
+    background-size: 80px 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  html,
+  body {
+    background-size: 60px 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  html,
+  body {
+    background-size: 40px 40px;
+  }
 }
 
 #register {
