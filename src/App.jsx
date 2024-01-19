@@ -6,11 +6,17 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Prize from "./components/Prize";
 import Themes from "./components/Themes";
+import { Route } from "react-router-dom";
 
 function App() {
   return (
     <div id="bgimg">
       <Header />
+      {/* <Route path="/Hero" component={Hero} />
+      <Route path="/Prize" component={Prize} />
+      <Route path="/Themes" component={Themes} />
+      <Route path="/About" component={About} />
+      <Route path="/Faq" component={Faq} /> */}
       <Hero />
       <Prize />
       <Themes />

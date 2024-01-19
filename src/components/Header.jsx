@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
+import { Link, BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -69,18 +70,19 @@ const Header = () => {
           </div>
           <ul className="flex justify-center text-md">
             <li className="text-white hover:text-text_col_1 transition px-8">
-              <a href="#">About</a>
+              {/* <NavLink to="About">About</NavLink> */}
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              <a href="#">Theme</a>
+              {/* <NavLink to="Themes">Themes</NavLink> */}
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              <a href="#">Prizes</a>
+              {/* <NavLink to="Prizes">Prizes</NavLink> */}
             </li>
             <li className="text-white hover:text-text_col_1 transition px-8">
-              <a href="#">FAQ</a>
+              {/* <NavLink to="Faq">FAQ</NavLink> */}
             </li>
           </ul>
+
           <button
             className="text-white text-lg font-bold  px-8 py-1 rounded-3xl mr-6"
             id="register"
