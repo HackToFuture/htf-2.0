@@ -71,7 +71,7 @@ const Header = () => {
               duration={500}
             >
               <img
-                src="./src/assets/htf-logo.png"
+                src="/src/assets/hero-htf-main.svg"
                 alt="logo"
                 className="aspect-auto w-24"
               />
