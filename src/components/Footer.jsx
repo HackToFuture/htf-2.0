@@ -1,4 +1,4 @@
-import React from "react";
+import htflogo from "/src/assets/hero-htf-main.svg";
 
 const Footer = () => {
   return (
@@ -13,9 +13,9 @@ const Footer = () => {
           &copy;2024 The sceptix club | All rights reserved.
         </p>
         <img
-          src="src/assets/htf-logo.png"
+          src={htflogo}
           alt="htf logo"
-          className=" aspect-auto w-14 sm:w-16 mr-6"
+          className=" aspect-auto w-14 sm:w-16 mr-8"
         />
       </div>
     </footer>
