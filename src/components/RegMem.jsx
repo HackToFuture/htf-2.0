@@ -2,24 +2,33 @@ const RegMem = ({ memData, onMemChange }) => {
   return (
     <div className="p-6 border-2 border-blue1 rounded-xl">
       <input
-        onChange={(e) => {onMemChange("name", e.target.value)}}
+        onChange={(e) => {
+          onMemChange("name", e.target.value);
+        }}
         value={memData.name}
         type="text"
         placeholder="Enter Name"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
       <input
-        onChange={(e) => {onMemChange("email", e.target.value)}}
+        onChange={(e) => {
+          onMemChange("email", e.target.value);
+        }}
         value={memData.email}
         type="email"
         placeholder="Enter Email"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
       <select
-        onChange={(e) => {onMemChange("year", e.target.value)}}
+        onChange={(e) => {
+          onMemChange("year", e.target.value);
+        }}
         value={memData.year}
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       >
+        <option className="text-bg_color font-semibold">
+          Select Year of Study
+        </option>
         <option value="1" className="text-bg_color font-semibold">
           1st year
         </option>
