@@ -1,3 +1,4 @@
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Faq from "./components/Faq";
@@ -8,11 +9,13 @@ import Prize from "./components/Prize";
 import Themes from "./components/Themes";
 import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
 import eglogo from "./assets/eg-logo.svg";
+import RegisterForm from "./pages/RegisterForm";
 
 const App = () => {
   return (
     <div id="bgimg">
       <Header />
+      {/* <RegisterForm /> */}
       <div id="hero">
         <Hero />
       </div>
