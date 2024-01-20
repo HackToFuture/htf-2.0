@@ -8,12 +8,14 @@ import Prize from "./components/Prize";
 import Themes from "./components/Themes";
 import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
 import eglogo from "./assets/eg-logo.svg";
+import RegisterForm from "./pages/RegisterForm";
 
 const App = () => {
   return (
     <div id="bgimg">
       <Header />
-      <div id="hero">
+      <RegisterForm />
+{/*       <div id="hero">
         <Hero />
       </div>
       <div id="prize">
@@ -28,7 +30,7 @@ const App = () => {
       </div>
       <div id="faq">
         <Faq />
-      </div>
+      </div> */}
       <Footer />
     </div>
   );
