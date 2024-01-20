@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import htflogo from "../assets/hero-htf-main.svg";
+import RegModal from "./RegModal/RegModal";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -39,13 +40,14 @@ const Hero = () => {
             inspire you and propel you towards your goals!
           </p>
 
-          <a
+          {/* <a
             href="/registration"
             className="text-white text-xl font-bold px-12 py-2 my-3 rounded-3xl font-interbold"
             id="register"
           >
             <button>Register</button>
-          </a>
+          </a> */}
+          <RegModal/>
         </div>{" "}
         <div className="md:w-3/4">
           <dotlottie-player
