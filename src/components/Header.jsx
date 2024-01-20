@@ -5,18 +5,29 @@ import htflogo from "../assets/hero-htf-main.svg";
 
 const Header = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos);
+      setPrevScrollPos(currentScrollPos);
+    };
+
 
     window.addEventListener("resize", handleResize);
+    window.addEventListener('scroll', handleScroll);
+
 
     return () => {
       window.removeEventListener("resize", handleResize);
+      window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollPos]);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,6 +37,7 @@ const Header = () => {
   };
 
   return (
+    visible && (
     <header className="bg-bg_color bg-opacity-40 backdrop-blur-blur1 h-16 md:h-20 flex items-center fixed top-0 w-full font-intermed z-10">
       {isMobile ? (
         <nav className="flex-grow flex justify-between items-center mr-6">
@@ -202,6 +214,7 @@ const Header = () => {
         </div>
       )}
     </header>
+    )
   );
 };
 
