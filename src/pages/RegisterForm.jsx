@@ -42,6 +42,7 @@ const RegisterForm = () => {
         gender: "",
       },
     ],
+    pdfFile: null, // i love pdfs
   });
 
   // function to handle change in team lead data
@@ -59,6 +60,11 @@ const RegisterForm = () => {
       newMembers[index] = { ...newMembers[index], [field]: value };
       return { ...prevData, members: newMembers };
     });
+  };
+
+  const handlePdfChange = (e) => {
+    const file = e.target.files[0];
+    setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
   };
 
   return (
@@ -118,6 +124,15 @@ const RegisterForm = () => {
               />
             </section>
           )}
+          <section className="mx-6 md:mx-12 mt-6 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
+            <p className="mb-2 text-xl">Upload Abstract</p>
+            <input
+              onChange={handlePdfChange}
+              type="file"
+              accept="application/pdf"
+              className="w-full bg-white bg-opacity-0 "
+            />
+          </section>
           <section className="px-6 md:px-12 mt-6">
             <button
               onClick={(e) => {
