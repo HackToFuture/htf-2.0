@@ -35,7 +35,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
           onLeadChange("phone", e.target.value);
         }}
         value={leadData.phone}
-        type="number"
+        type="text"
         placeholder="Enter Phone Number"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
@@ -59,6 +59,15 @@ const RegLead = ({ leadData, onLeadChange }) => {
           4th year
         </option>
       </select>
+      <input
+        onChange={(e) => {
+          onLeadChange("college", e.target.value);
+        }}
+        value={leadData.college}
+        type="text"
+        placeholder="Enter College Name"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+      />
       <div className="flex justify-center">
         <label className="flex items-center cursor-pointer transition ease-in-out">
           <input
@@ -68,7 +77,6 @@ const RegLead = ({ leadData, onLeadChange }) => {
             checked={leadData.gender === "male"}
             onChange={() => onLeadChange("gender", "male")}
           />
-
           <span className="font-inter font-medium text-text_col_1 ml-3">
             Male
           </span>
@@ -86,15 +94,6 @@ const RegLead = ({ leadData, onLeadChange }) => {
           </span>
         </label>
       </div>
-      <input
-        onChange={(e) => {
-          onLeadChange("college", e.target.value);
-        }}
-        value={leadData.college}
-        type="text"
-        placeholder="Enter College Name"
-        className="w-full px-5 py-2 mt-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
-      />
     </div>
   );
 };
