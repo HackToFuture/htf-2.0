@@ -40,8 +40,7 @@ const Hero = () => {
           </p>
 
           <a
-            href="https://tw-elements.com/docs/standard/navigation/headers/#!"
-            target="_blank"
+            href="/registration"
             className="text-white text-xl font-bold px-12 py-2 my-3 rounded-3xl font-interbold"
             id="register"
           >
