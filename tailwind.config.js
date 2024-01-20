@@ -11,6 +11,9 @@ export default {
         text_col_2: "#008ed8",
         orange1: "#fca311",
         yellow1: "#ffd409",
+        blue1: "#008ed8",
+        blue2: "#afe4ff",
+        phc: "d9f0fc",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
