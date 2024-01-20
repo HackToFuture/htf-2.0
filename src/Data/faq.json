@@ -1,22 +1,26 @@
 [
     {
-      "question": "What is your name?",
-      "answer": "My name is GitHub Copilot."
+      "question": "What is a Hackathon?",
+      "answer": "A hackathon is an event where people engage in rapid and collaborative engineering over a relatively short period of time such as 24 or 48 hours."
     },
     {
-      "question": "What do you do?",
-      "answer": "I assist with programming tasks."
+      "question": "Will the hackathon be an online or offline event?",
+      "answer": "The event will be held offline."
     },
     {
-      "question": "What is Git?",
-      "answer": "Git is a distributed version control system for tracking changes in source code during software development."
+      "question": "Who can participate?",
+      "answer": "HackToFuture is open to all BE, B. Tech, BCA, MCA and MBA students in and around Karnataka."
     },
     {
-      "question": "What is JavaScript test messgae messgae messgae messgae messgae messgae?",
-      "answer": "JavaScript is a high-level, interpreted programming language that conforms to the ECMAScript specification.messgae messgae messgae messgae messgae messgae"
+      "question": "Do I have to pay to participate?",
+      "answer": "Absolutely not! Participation is completely free."
     },
     {
-      "question": "What is React?",
-      "answer": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies."
+      "question": "What is the team size to participate in the hackathon?",
+      "answer": "You may participate in teams of size 3 - 4."
+    },
+    {
+      "question": "Are inter-college teams allowed?",
+      "answer": "No. Though inter-specialisation and inter-year teams are allowed."
     }
   ]
