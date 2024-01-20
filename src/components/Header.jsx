@@ -61,7 +61,7 @@ const Header = () => {
         </nav>
       ) : (
         <nav className="flex-grow flex justify-between items-center ">
-          <div className="flex-shrink-0 ml-8">
+          <div className="flex-shrink-0 ml-8 cursor-pointer">
             <Link
               activeClass="active"
               to="hero"

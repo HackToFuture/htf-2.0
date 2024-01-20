@@ -52,6 +52,7 @@ const App = () => {
                 <>
                   <HeaderReg />
                   <RegisterForm />
+                  <Footer />
                 </>
               }
             />
