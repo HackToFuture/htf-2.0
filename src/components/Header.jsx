@@ -127,7 +127,6 @@ const Header = () => {
           >
             <a
               href="/registration"
-              target="_blank"
             >
               Register
             </a>
@@ -190,8 +189,7 @@ const Header = () => {
             <div className="ml-5">
               <button className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
                 <a
-                  href="https://tw-elements.com/docs/standard/navigation/headers/#!"
-                  target="_blank"
+                  href="/registration"
                   className="text-text_col_1"
                 >
                   Register
