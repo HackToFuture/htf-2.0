@@ -1,9 +1,7 @@
+import { initializeApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
-import {initializeApp} from 'firebase/app'
-import { getAuth,GoogleAuthProvider } from "firebase/auth";
-
-const api = import.meta.env.VITE_FIREBASE_API
-
+const api = import.meta.env.VITE_FIREBASE_API;
 
 const firebaseConfig = {
   apiKey: api,
@@ -11,10 +9,12 @@ const firebaseConfig = {
   projectId: import.meta.env.VITE_projectId,
   storageBucket: import.meta.env.VITE_storageBucket,
   messagingSenderId: import.meta.env.VITE_messagingSenderId,
-  appId: import.meta.env.VITE_appId
+  appId: import.meta.env.VITE_appId,
 };
-const app =  initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
 
 // export const auth = firebase.auth();
-export const auth = getAuth(app);
-export const provider = new GoogleAuthProvider()
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+export { auth, provider };

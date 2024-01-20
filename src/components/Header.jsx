@@ -2,8 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import htflogo from "../assets/hero-htf-main.svg";
+import RegModal from "./RegModal/RegModal";
 
 const Header = () => {
+  
+
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   useEffect(() => {
@@ -121,12 +124,14 @@ const Header = () => {
             </li>
           </ul>
 
-          <button
+          {/* <button
+            onClick={googleAuth}
             className="text-white text-lg font-bold  px-8 py-1 rounded-3xl mr-6"
             id="register"
           >
             <a href="/registration">Register</a>
-          </button>
+          </button> */}
+          <RegModal/>
         </nav>
       )}
       {isOpen && (
@@ -183,11 +188,15 @@ const Header = () => {
           </ul>
           <div className=" h-16 flex items-center justify-center">
             <div className="ml-5">
-              <button className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
+              {/* <button
+                onClick={(e) => googleAuth(e)}
+                className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 "
+              >
                 <a href="/registration" className="text-text_col_1">
                   Register
                 </a>
-              </button>
+              </button> */}
+              <RegModal/>
             </div>
           </div>
         </div>
