@@ -15,42 +15,50 @@ import RegisterForm from "./pages/RegisterForm";
 const App = () => {
   return (
     <>
-    <Router>
-      <div id="bgimg">
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-                <div id="hero">
-                  <Hero />
-                </div>
-                <div id="prize">
-                  <Prize />
-                </div>
-                <div id="theme">
-                  <Themes />
-                </div>
-                <div
-                  id="about"
-                  className=" flex flex-col sm:flex-row justify-center"
-                >
-                  <About Id="1" Img={eglogo} />
-                  <About Id="0" Img={sjeclogo} />
-                </div>
-                <div id="faq">
-                  <Faq />
-                </div>
-                <Footer />
-              </>
-            }
-          />
-          <Route path="/registration" element={<RegisterForm />} />
-        </Routes>
-      </div>
-    </Router>
-  </>
+      <Router>
+        <div id="bgimg">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header />
+                  <div id="hero">
+                    <Hero />
+                  </div>
+                  <div id="prize">
+                    <Prize />
+                  </div>
+                  <div id="theme">
+                    <Themes />
+                  </div>
+                  <div
+                    id="about"
+                    className=" flex flex-col sm:flex-row justify-center"
+                  >
+                    <About Id="1" Img={eglogo} />
+                    <About Id="0" Img={sjeclogo} />
+                  </div>
+                  <div id="faq">
+                    <Faq />
+                  </div>
+                  <Footer />
+                </>
+              }
+            />
+            <Route
+              path="/registration"
+              element={
+                <>
+                  <HeaderReg />
+                  <RegisterForm />
+                </>
+              }
+            />
+          </Routes>
+        </div>
+      </Router>
+    </>
   );
 };
 
