@@ -58,7 +58,7 @@ const Header = () => {
         </nav>
       ) : (
         <nav className="flex-grow flex justify-between items-center ">
-          <div className="flex-shrink-0 ml-8">
+          <div className="flex-shrink-0 ml-8 cursor-pointer">
             <Link
               activeClass="active"
               to="hero"
@@ -125,11 +125,7 @@ const Header = () => {
             className="text-white text-lg font-bold  px-8 py-1 rounded-3xl mr-6"
             id="register"
           >
-            <a
-              href="/registration"
-            >
-              Register
-            </a>
+            <a href="/registration">Register</a>
           </button>
         </nav>
       )}
@@ -188,10 +184,7 @@ const Header = () => {
           <div className=" h-16 flex items-center justify-center">
             <div className="ml-5">
               <button className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
-                <a
-                  href="/registration"
-                  className="text-text_col_1"
-                >
+                <a href="/registration" className="text-text_col_1">
                   Register
                 </a>
               </button>
