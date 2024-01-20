@@ -16,10 +16,7 @@ const Themes = () => {
           </h2>
 
           <p className="p-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit sequi
-            sunt totam expedita ex animi suscipit corporis quos quidem impedit,
-            nam rerum enim assumenda! Nostrum, qui impedit. Vero, enim
-            voluptate?
+          Anonymise user identities in large databases to ethically employ machine learning in understanding customer trends and behaviour without violating their rights.
           </p>
         </div>
       </div>
@@ -29,10 +26,7 @@ const Themes = () => {
             Problem Statement 2
           </h2>
           <p className="p-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit sequi
-            sunt totam expedita ex animi suscipit corporis quos quidem impedit,
-            nam rerum enim assumenda! Nostrum, qui impedit. Vero, enim
-            voluptate?
+          Create a blockchain-powered platform allowing users to lease their information to social media services, with the assurance that the data will not be retained upon exiting the service.
           </p>
         </div>
         <img
@@ -52,10 +46,7 @@ const Themes = () => {
             Problem Statement 3
           </h2>
           <p className="p-4">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit sequi
-            sunt totam expedita ex animi suscipit corporis quos quidem impedit,
-            nam rerum enim assumenda! Nostrum, qui impedit. Vero, enim
-            voluptate?
+          Develop an AI based solution to offer timely insights into current global hacking trends, prioritising potential threats based on their likelihood of targeting specific enterprises.
           </p>
         </div>
       </div>
