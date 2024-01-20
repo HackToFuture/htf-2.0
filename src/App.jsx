@@ -1,3 +1,4 @@
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Faq from "./components/Faq";
@@ -14,8 +15,8 @@ const App = () => {
   return (
     <div id="bgimg">
       <Header />
-      <RegisterForm />
-{/*       <div id="hero">
+      {/* <RegisterForm /> */}
+      <div id="hero">
         <Hero />
       </div>
       <div id="prize">
@@ -30,7 +31,7 @@ const App = () => {
       </div>
       <div id="faq">
         <Faq />
-      </div> */}
+      </div>
       <Footer />
     </div>
   );
