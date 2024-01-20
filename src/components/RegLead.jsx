@@ -22,7 +22,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
       <input
-        
+        readOnly
         value={localStorage.getItem("email")}
         
         type="email"
