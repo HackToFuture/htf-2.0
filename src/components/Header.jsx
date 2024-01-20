@@ -126,7 +126,7 @@ const Header = () => {
             id="register"
           >
             <a
-              href="https://tw-elements.com/docs/standard/navigation/headers/#!"
+              href="/registration"
               target="_blank"
             >
               Register

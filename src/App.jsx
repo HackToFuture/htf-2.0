@@ -1,4 +1,4 @@
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
 import Faq from "./components/Faq";
@@ -13,27 +13,43 @@ import RegisterForm from "./pages/RegisterForm";
 
 const App = () => {
   return (
-    <div id="bgimg">
-      <Header />
-      {/* <RegisterForm /> */}
-      <div id="hero">
-        <Hero />
+    <>
+    <Router>
+      <div id="bgimg">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <div id="hero">
+                  <Hero />
+                </div>
+                <div id="prize">
+                  <Prize />
+                </div>
+                <div id="theme">
+                  <Themes />
+                </div>
+                <div
+                  id="about"
+                  className=" flex flex-col sm:flex-row justify-center"
+                >
+                  <About Id="1" Img={eglogo} />
+                  <About Id="0" Img={sjeclogo} />
+                </div>
+                <div id="faq">
+                  <Faq />
+                </div>
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/registration" element={<RegisterForm />} />
+        </Routes>
       </div>
-      <div id="prize">
-        <Prize />
-      </div>
-      <div id="theme">
-        <Themes />
-      </div>
-      <div id="about" className=" flex flex-col sm:flex-row justify-center">
-        <About Id="1" Img={eglogo} />
-        <About Id="0" Img={sjeclogo} />
-      </div>
-      <div id="faq">
-        <Faq />
-      </div>
-      <Footer />
-    </div>
+    </Router>
+  </>
   );
 };
 
