@@ -79,8 +79,6 @@ const RegisterForm = () => {
     setTeamData((prevData) => ({
       ...prevData,
       lead: { ...prevData.lead, [field]: value },
-      
-      
     }));
   };
 
@@ -236,6 +234,7 @@ const RegisterForm = () => {
             <input
               onChange={handlePdfChange}
               type="text"
+              required="required"
               className="w-full bg-white border-2 border-blue2 rounded-xl bg-opacity-0 py-2 px-5"
             />
           </section>
