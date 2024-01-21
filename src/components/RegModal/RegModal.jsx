@@ -47,7 +47,7 @@ const RegModal = () => {
             themed hackathon, an abstract must be submitted along with your
             application. Please make a copy of{" "}
             <a
-              className="border-b-4 border-blue-300"
+              className="border-b-2 border-blue-300 text-blue-500 font-bold"
               href="https://docs.google.com/document/d/1b8UOI4Ptn2G0G_Gks3H4MfAa81GuI8QJqq2wPhnBVgY/edit?usp=sharing"
               target="_blank"
             >
