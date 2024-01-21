@@ -1,16 +1,19 @@
 const RegMem = ({ memData, onMemChange }) => {
   return (
     <div className="p-6 border-2 border-blue1 rounded-xl">
-      <input
+        <input
+          required ="required"
         onChange={(e) => {
           onMemChange("name", e.target.value);
         }}
         value={memData.name}
         type="text"
-        placeholder="Enter Name"
+          placeholder="Enter Name"
+      
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
       <input
+         required ="required"
         onChange={(e) => {
           onMemChange("email", e.target.value);
         }}
@@ -44,7 +47,8 @@ const RegMem = ({ memData, onMemChange }) => {
       </select>
       <div className="flex justify-center">
         <label className="flex items-center cursor-pointer transition ease-in-out">
-          <input
+            <input
+            required="required"
             name={`gender-$memData.id`}
             type="radio"
             value="male"
@@ -57,6 +61,7 @@ const RegMem = ({ memData, onMemChange }) => {
         </label>
         <label className="flex items-center cursor-pointer transition ease-in-out ml-6">
           <input
+             required ="required"
             name={`gender-$memData.id`}
             type="radio"
             value="female"
@@ -68,7 +73,7 @@ const RegMem = ({ memData, onMemChange }) => {
           </span>
         </label>
       </div>
-    </div>
+      </div>
   );
 };
 
