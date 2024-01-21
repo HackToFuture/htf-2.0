@@ -7,7 +7,7 @@ const Prize = () => {
         <h2 className="text-2xl md:text-4xl font-inter font-bold mb-10 ">
           🚀{" "}
           <span className="bg-gradient-right bg-clip-text text-transparent">
-            Unleash Your Potential: Prize Pool ₹200,000{" "}
+            Unleash Your Potential: Prize Pool ₹2,00,000{" "}
           </span>
           🏆
         </h2>
@@ -29,7 +29,7 @@ const Prize = () => {
           <div className=" mt-8 md:mt-0 md:p-20 font-inter font-medium text-base md:text-lg">
             <p className="text-text_col_1 mb-6 leading-tight md:leading-tight">
               Step into the dynamic world of HackToFuture! Our prize pool of
-              ₹200,000 is not just a reward; it's an experience.
+              ₹2,00,000 is not just a reward; it's an experience.
               <br /> Imagine a virtual galaxy where lines of code dance and form
               constellations of innovation.
             </p>
