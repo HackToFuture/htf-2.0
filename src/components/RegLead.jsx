@@ -1,6 +1,13 @@
 import React from "react";
+import { useEffect } from "react";
+
+
 
 const RegLead = ({ leadData, onLeadChange }) => {
+  useEffect(() => {
+    
+    onLeadChange("email",localStorage.getItem("email"))
+  },[])
   return (
     <div className="p-6 border-2 border-blue1 rounded-xl">
         <input
@@ -27,6 +34,9 @@ const RegLead = ({ leadData, onLeadChange }) => {
           required ="required"
         readOnly
         value={localStorage.getItem("email")}
+        onLoad={(e) => {
+          onLeadChange("email",e.target.value)
+        }}
         
         type="email"
         // placeholder="Enter Email"
