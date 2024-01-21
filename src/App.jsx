@@ -9,7 +9,7 @@ import Hero from "./components/Hero";
 import Prize from "./components/Prize";
 import Themes from "./components/Themes";
 import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
-import eglogo from "./assets/eg-logo.svg";
+import eglogo from "./assets/eg-logo-red-white.png";
 import RegisterForm from "./pages/RegisterForm";
 
 const App = () => {
