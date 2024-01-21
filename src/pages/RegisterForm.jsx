@@ -1,8 +1,35 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import RegLead from "../components/RegLead";
 import RegMem from "../components/RegMem";
-
+import { useNavigate } from "react-router-dom";
+import '../config/firebase'
+import {getFirestore,addDoc,collection,getDocs} from "firebase/firestore"
 const RegisterForm = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    if (localStorage.getItem("email") == undefined) {
+      navigate("/")
+    }
+    const colRef = collection(db, "registration")
+    getDocs(colRef).then((snapshot) => {
+      let user = []
+      snapshot.docs.forEach((doc) => {
+        user.push({...doc.data() ,id:doc.id})
+      })
+      user.forEach((user_data) => {
+
+        if (user_data.lead.email || user_data.LeaderEmail === localStorage.getItem('email')) { 
+          alert("Leader email id is already registered")
+          navigate("/")
+        }
+        
+      })
+      
+    }).catch(err => {
+      console.log(err)
+    })
+    
+  })
   const [member4, setMember4] = useState(false);
 
   const [teamData, setTeamData] = useState({
@@ -47,9 +74,12 @@ const RegisterForm = () => {
 
   // function to handle change in team lead data
   const handleLeadChange = (field, value) => {
+   
     setTeamData((prevData) => ({
+      lead: {...prevData.lead,["email"] : localStorage.getItem("email")},
       ...prevData,
       lead: { ...prevData.lead, [field]: value },
+      
     }));
   };
 
@@ -74,43 +104,43 @@ const RegisterForm = () => {
   const [mem4Missing, setMem4Missing] = useState(false);
   const [pdfMissing, setPdfMissing] = useState(false);
 
-  function checkMissing() {
-    const { lead, members, pdfFile } = teamData;
+  // function checkMissing() {
+  //   const { lead, members, pdfFile } = teamData;
 
-    for (let key in lead) {
-      if (lead[key] === "") {
-        setLeadMissing(true);
-        break;
-      } else setLeadMissing(false);
-    }
+  //   for (let key in lead) {
+  //     if (lead[key] === "") {
+  //       setLeadMissing(true);
+  //       break;
+  //     } else setLeadMissing(false);
+  //   }
 
-    for (let key in members[0]) {
-      if (members[0][key] === "") {
-        setMem2Missing(true);
-        break;
-      } else setMem2Missing(false);
-    }
+  //   for (let key in members[0]) {
+  //     if (members[0][key] === "") {
+  //       setMem2Missing(true);
+  //       break;
+  //     } else setMem2Missing(false);
+  //   }
 
-    for (let key in members[1]) {
-      if (members[1][key] === "") {
-        setMem3Missing(true);
-        break;
-      } else setMem3Missing(false);
-    }
+  //   for (let key in members[1]) {
+  //     if (members[1][key] === "") {
+  //       setMem3Missing(true);
+  //       break;
+  //     } else setMem3Missing(false);
+  //   }
 
-    if (member4) {
-      for (let key in members[2]) {
-        if (members[2][key] === "") {
-          setMem4Missing(true);
-          break;
-        } else setMem4Missing(false);
-      }
-    } else setMem4Missing(false);
+  //   if (member4) {
+  //     for (let key in members[2]) {
+  //       if (members[2][key] === "") {
+  //         setMem4Missing(true);
+  //         break;
+  //       } else setMem4Missing(false);
+  //     }
+  //   } else setMem4Missing(false);
 
-    if (pdfFile === null) {
-      setPdfMissing(true);
-    } else setPdfMissing(false);
-  }
+  //   if (pdfFile === null) {
+  //     setPdfMissing(true);
+  //   } else setPdfMissing(false);
+  // }
 
   // check if phone number is 10 digits or invalid
   const [phoneError, setPhoneError] = useState(false);
@@ -124,6 +154,18 @@ const RegisterForm = () => {
       setPhoneError(false);
     }
   };
+  const db = getFirestore()
+  const handleFormSubmission = async (e) => {
+    
+    e.preventDefault();
+    // const docRef = await addDoc(collection(db, "registration"), {
+    //   ...teamData
+    // })
+    alert("Data added")
+
+  }
+
+ 
 
   return (
     <div className="flex justify-center h-auto">
@@ -131,7 +173,9 @@ const RegisterForm = () => {
         <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
           Registration
         </h1>
-        <form action="">
+        <form action="" onSubmit={(e) => {
+         handleFormSubmission(e)
+        }}>
           {/* Team lead section */}
           <section className="px-6 md:px-12">
             <div className="flex justify-between items-center mb-2">
@@ -211,12 +255,12 @@ const RegisterForm = () => {
           </section>
           <section className="px-6 md:px-12 mt-6">
             <button
-              onClick={(e) => {
-                console.log({ teamData });
-                e.preventDefault();
-                checkMissing();
-                handlePhoneInvalid();
-              }}
+              // onClick={(e) => {
+              //   console.log({ teamData });
+              //   e.preventDefault();
+              //   // checkMissing();
+              //   handlePhoneInvalid();
+              // }}
               className="w-full bg-blue1 px-4 py-2 rounded-3xl text-text_col_1 font-inter font-semibold text-xl"
             >
               Submit

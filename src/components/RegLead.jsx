@@ -3,7 +3,8 @@ import React from "react";
 const RegLead = ({ leadData, onLeadChange }) => {
   return (
     <div className="p-6 border-2 border-blue1 rounded-xl">
-      <input
+        <input
+            required ="required"
         onChange={(e) => {
           onLeadChange("teamName", e.target.value);
         }}
@@ -12,7 +13,8 @@ const RegLead = ({ leadData, onLeadChange }) => {
         placeholder="Enter Team Name"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
-      <input
+        <input
+          required ="required"
         onChange={(e) => {
           onLeadChange("name", e.target.value);
         }}
@@ -21,15 +23,17 @@ const RegLead = ({ leadData, onLeadChange }) => {
         placeholder="Enter Name"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
-      <input
-        
+        <input
+          required ="required"
+        readOnly
         value={localStorage.getItem("email")}
         
         type="email"
         // placeholder="Enter Email"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
-      <input
+        <input
+          required ="required"
         onChange={(e) => {
           onLeadChange("phone", e.target.value);
         }}
@@ -61,7 +65,8 @@ const RegLead = ({ leadData, onLeadChange }) => {
           4th year
         </option>
       </select>
-      <input
+        <input
+          required ="required"
         onChange={(e) => {
           onLeadChange("college", e.target.value);
         }}
@@ -72,7 +77,8 @@ const RegLead = ({ leadData, onLeadChange }) => {
       />
       <div className="flex justify-center">
         <label className="flex items-center cursor-pointer transition ease-in-out">
-          <input
+            <input
+              required ="required"
             type="radio"
             name={`gender-${leadData.id}`}
             value="male"
@@ -84,7 +90,8 @@ const RegLead = ({ leadData, onLeadChange }) => {
           </span>
         </label>
         <label className="flex items-center cursor-pointer transition ease-in-out ml-6">
-          <input
+            <input
+              required ="required"
             type="radio"
             name={`gender-${leadData.id}`}
             value="female"
@@ -96,7 +103,8 @@ const RegLead = ({ leadData, onLeadChange }) => {
           </span>
         </label>
       </div>
-    </div>
+      </div>
+     
   );
 };
 
