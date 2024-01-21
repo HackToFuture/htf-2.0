@@ -139,7 +139,7 @@ const RegisterForm = () => {
       }
     } else setMem4Missing(false);
 
-    if (pdfFile === null) {
+    if (pdfFile === "") {
       setPdfMissing(true);
     } else setPdfMissing(false);
 
@@ -158,7 +158,6 @@ const RegisterForm = () => {
       setPhoneError(false);
     }
   };
-  const db = getFirestore();
   const db = getFirestore();
   const handleFormSubmission = async (e) => {
     e.preventDefault();
