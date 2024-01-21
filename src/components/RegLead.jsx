@@ -44,9 +44,11 @@ const RegLead = ({ leadData, onLeadChange }) => {
           onLeadChange("phone", e.target.value);
         }}
         value={leadData.phone}
-        type="text"
+        type="number"
         placeholder="Enter Phone Number"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        min="1"
+        max="10"
       />
       <select
         onChange={(e) => {

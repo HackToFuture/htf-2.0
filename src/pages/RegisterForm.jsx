@@ -18,10 +18,7 @@ const RegisterForm = () => {
           user.push({ ...doc.data(), id: doc.id });
         });
         user.forEach((user_data) => {
-          if (
-            user_data.lead.email ||
-            user_data.LeaderEmail === sessionStorage.getItem("email")
-          ) {
+          if (user_data.lead.email === sessionStorage.getItem("email")) {
             alert("Leader email id is already registered");
             navigate("/");
           }
