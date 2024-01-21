@@ -4,6 +4,7 @@ import RegMem from "../components/RegMem";
 import { useNavigate } from "react-router-dom";
 import "../config/firebase";
 import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
+import Popup from "reactjs-popup";
 const RegisterForm = () => {
   const navigate = useNavigate();
   useEffect(() => {
@@ -93,55 +94,52 @@ const RegisterForm = () => {
     setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
   };
 
-  // const handlePdfChange = (e) => {
-  //   const file = e.target.files[0];
-  //   setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
-  // };
-
   // function to check if any field is empty
   const [leadMissing, setLeadMissing] = useState(false);
   const [mem2Missing, setMem2Missing] = useState(false);
   const [mem3Missing, setMem3Missing] = useState(false);
   const [mem4Missing, setMem4Missing] = useState(false);
   const [pdfMissing, setPdfMissing] = useState(false);
+  const [popupIsOpen, setPopupIsOpen] = useState(false);
+  const [isNotValid, setIsNotValid] = useState(false);
 
-  // function checkMissing() {
-  //   const { lead, members, pdfFile } = teamData;
+  function checkMissing() {
+    const { lead, members, pdfFile } = teamData;
 
-  //   for (let key in lead) {
-  //     if (lead[key] === "") {
-  //       setLeadMissing(true);
-  //       break;
-  //     } else setLeadMissing(false);
-  //   }
+    for (let key in lead) {
+      if (lead[key] === "") {
+        setLeadMissing(true);
+        break;
+      } else setLeadMissing(false);
+    }
 
-  //   for (let key in members[0]) {
-  //     if (members[0][key] === "") {
-  //       setMem2Missing(true);
-  //       break;
-  //     } else setMem2Missing(false);
-  //   }
+    for (let key in members[0]) {
+      if (members[0][key] === "") {
+        setMem2Missing(true);
+        break;
+      } else setMem2Missing(false);
+    }
 
-  //   for (let key in members[1]) {
-  //     if (members[1][key] === "") {
-  //       setMem3Missing(true);
-  //       break;
-  //     } else setMem3Missing(false);
-  //   }
+    for (let key in members[1]) {
+      if (members[1][key] === "") {
+        setMem3Missing(true);
+        break;
+      } else setMem3Missing(false);
+    }
 
-  //   if (member4) {
-  //     for (let key in members[2]) {
-  //       if (members[2][key] === "") {
-  //         setMem4Missing(true);
-  //         break;
-  //       } else setMem4Missing(false);
-  //     }
-  //   } else setMem4Missing(false);
+    if (member4) {
+      for (let key in members[2]) {
+        if (members[2][key] === "") {
+          setMem4Missing(true);
+          break;
+        } else setMem4Missing(false);
+      }
+    } else setMem4Missing(false);
 
-  //   if (pdfFile === null) {
-  //     setPdfMissing(true);
-  //   } else setPdfMissing(false);
-  // }
+    if (pdfFile === null) {
+      setPdfMissing(true);
+    } else setPdfMissing(false);
+  }
 
   // check if phone number is 10 digits or invalid
   const [phoneError, setPhoneError] = useState(false);
@@ -158,14 +156,31 @@ const RegisterForm = () => {
   const db = getFirestore();
   const handleFormSubmission = async (e) => {
     e.preventDefault();
+
+    checkMissing();
+    handlePhoneInvalid();
+
+    const formIsNotValid =
+      phoneError ||
+      leadMissing ||
+      mem2Missing ||
+      mem3Missing ||
+      mem4Missing ||
+      pdfMissing;
+
+    if(formIsNotValid == false ){
+      setPopupIsOpen(true);
+      setIsNotValid(true);
+    }
+
     if (phoneError) {
       alert("Invalid phone number");
       return;
     }
+    
     const docRef = await addDoc(collection(db, "registration"), {
       ...teamData,
     });
-    alert("Registration successful");
   };
 
   return (
@@ -259,17 +274,27 @@ const RegisterForm = () => {
           </section>
           <section className="px-6 md:px-12 mt-6">
             <button
-              onClick={() => {
+              onClick={(e) => {
                 //  console.log({ teamData });
-                //  e.preventDefault();
-                //  checkMissing();
-                handlePhoneInvalid();
+                // e.preventDefault();
               }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
               Submit
             </button>
           </section>
+          {isNotValid && (
+            <Popup
+              open={popupIsOpen}
+              closeOnDocumentClick={false}
+              closeOnEscape={false}
+              onClose={() => setPopupIsOpen(false)}
+            >
+              <div className="flex justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+                <p>Registration successful</p>
+              </div>
+            </Popup>
+          )}
         </form>
       </div>
     </div>
