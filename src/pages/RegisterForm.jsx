@@ -17,7 +17,6 @@ const RegisterForm = () => {
         user.push({...doc.data() ,id:doc.id})
       })
       user.forEach((user_data) => {
-
         if (user_data.lead.email || user_data.LeaderEmail === localStorage.getItem('email')) { 
           alert("Leader email id is already registered")
           navigate("/")
@@ -158,9 +157,9 @@ const RegisterForm = () => {
   const handleFormSubmission = async (e) => {
     
     e.preventDefault();
-    // const docRef = await addDoc(collection(db, "registration"), {
-    //   ...teamData
-    // })
+    const docRef = await addDoc(collection(db, "registration"), {
+      ...teamData
+    })
     alert("Data added")
 
   }
