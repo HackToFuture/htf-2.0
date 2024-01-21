@@ -1,35 +1,36 @@
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 import RegLead from "../components/RegLead";
 import RegMem from "../components/RegMem";
 import { useNavigate } from "react-router-dom";
-import '../config/firebase'
-import {getFirestore,addDoc,collection,getDocs} from "firebase/firestore"
+import "../config/firebase";
+import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
 const RegisterForm = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (localStorage.getItem("email") == undefined) {
-      navigate("/")
+      navigate("/");
     }
-    const colRef = collection(db, "registration")
-    getDocs(colRef).then((snapshot) => {
-      let user = []
-      snapshot.docs.forEach((doc) => {
-        user.push({...doc.data() ,id:doc.id})
+    const colRef = collection(db, "registration");
+    getDocs(colRef)
+      .then((snapshot) => {
+        let user = [];
+        snapshot.docs.forEach((doc) => {
+          user.push({ ...doc.data(), id: doc.id });
+        });
+        user.forEach((user_data) => {
+          if (
+            user_data.lead.email ||
+            user_data.LeaderEmail === localStorage.getItem("email")
+          ) {
+            alert("Leader email id is already registered");
+            navigate("/");
+          }
+        });
       })
-      user.forEach((user_data) => {
-
-        if (user_data.lead.email || user_data.LeaderEmail === localStorage.getItem('email')) { 
-          alert("Leader email id is already registered")
-          navigate("/")
-        }
-        
-      })
-      
-    }).catch(err => {
-      console.log(err)
-    })
-    
-  })
+      .catch((err) => {
+        console.log(err);
+      });
+  });
   const [member4, setMember4] = useState(false);
 
   const [teamData, setTeamData] = useState({
@@ -69,17 +70,15 @@ const RegisterForm = () => {
         gender: "",
       },
     ],
-    pdfFile: null, // i love pdfs
+    pdfLink: "", // i love pdfs
   });
 
   // function to handle change in team lead data
   const handleLeadChange = (field, value) => {
-   
     setTeamData((prevData) => ({
-      lead: {...prevData.lead,["email"] : localStorage.getItem("email")},
+      lead: { ...prevData.lead, ["email"]: localStorage.getItem("email") },
       ...prevData,
       lead: { ...prevData.lead, [field]: value },
-      
     }));
   };
 
@@ -93,9 +92,14 @@ const RegisterForm = () => {
   };
 
   const handlePdfChange = (e) => {
-    const file = e.target.files[0];
-    setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
+    const link = e.target.value;
+    setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
   };
+
+  // const handlePdfChange = (e) => {
+  //   const file = e.target.files[0];
+  //   setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
+  // };
 
   // function to check if any field is empty
   const [leadMissing, setLeadMissing] = useState(false);
@@ -154,18 +158,14 @@ const RegisterForm = () => {
       setPhoneError(false);
     }
   };
-  const db = getFirestore()
+  const db = getFirestore();
   const handleFormSubmission = async (e) => {
-    
     e.preventDefault();
     // const docRef = await addDoc(collection(db, "registration"), {
     //   ...teamData
     // })
-    alert("Data added")
-
-  }
-
- 
+    alert("Data added");
+  };
 
   return (
     <div className="flex justify-center h-auto">
@@ -173,9 +173,12 @@ const RegisterForm = () => {
         <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
           Registration
         </h1>
-        <form action="" onSubmit={(e) => {
-         handleFormSubmission(e)
-        }}>
+        <form
+          action=""
+          onSubmit={(e) => {
+            handleFormSubmission(e);
+          }}
+        >
           {/* Team lead section */}
           <section className="px-6 md:px-12">
             <div className="flex justify-between items-center mb-2">
@@ -227,12 +230,11 @@ const RegisterForm = () => {
             </section>
           )}
           <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
-            <p className="mb-2 text-xl">Upload Abstract</p>
+            <p className="mb-2 text-xl">Upload Abstract Link</p>
             <input
               onChange={handlePdfChange}
-              type="file"
-              accept="application/pdf"
-              className="w-full bg-white bg-opacity-0 "
+              type="text"
+              className="w-full bg-white border-2 border-blue2 rounded-xl bg-opacity-0 py-2 px-5"
             />
           </section>
           <section className="flex flex-col items-center">
@@ -255,13 +257,13 @@ const RegisterForm = () => {
           </section>
           <section className="px-6 md:px-12 mt-6">
             <button
-              // onClick={(e) => {
-              //   console.log({ teamData });
-              //   e.preventDefault();
-              //   // checkMissing();
-              //   handlePhoneInvalid();
-              // }}
-              className="w-full bg-blue1 px-4 py-2 rounded-3xl text-text_col_1 font-inter font-semibold text-xl"
+              onClick={(e) => {
+                console.log({ teamData });
+                //   e.preventDefault();
+                //   // checkMissing();
+                handlePhoneInvalid();
+              }}
+              className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
               Submit
             </button>
