@@ -27,26 +27,11 @@ const RegisterForm = () => {
           }
         });
       })
-<<<<<<< HEAD
       .catch((err) => {
         console.log(err);
       });
   });
-=======
-      user.forEach((user_data) => {
-        if (user_data.lead.email || user_data.LeaderEmail === localStorage.getItem('email')) { 
-          alert("Leader email id is already registered")
-          navigate("/")
-        }
-        
-      })
-      
-    }).catch(err => {
-      console.log(err)
-    })
-    
-  })
->>>>>>> 506b63c625f89ae1fea2be692d75cff07719c789
+
   const [member4, setMember4] = useState(false);
 
   const [teamData, setTeamData] = useState({
@@ -177,22 +162,11 @@ const RegisterForm = () => {
   const db = getFirestore();
   const handleFormSubmission = async (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-    // const docRef = await addDoc(collection(db, "registration"), {
-    //   ...teamData
-    // })
+    const docRef = await addDoc(collection(db, "registration"), {
+      ...teamData,
+    });
     alert("Data added");
   };
-=======
-    const docRef = await addDoc(collection(db, "registration"), {
-      ...teamData
-    })
-    alert("Data added")
-
-  }
-
- 
->>>>>>> 506b63c625f89ae1fea2be692d75cff07719c789
 
   return (
     <div className="flex justify-center h-auto">
@@ -284,12 +258,12 @@ const RegisterForm = () => {
           </section>
           <section className="px-6 md:px-12 mt-6">
             <button
-              // onClick={(e) => {
-              //  console.log({ teamData });
-              //  e.preventDefault();
-              //  checkMissing();
-              //  handlePhoneInvalid();
-              // }}
+              onClick={() => {
+                //  console.log({ teamData });
+                //  e.preventDefault();
+                //  checkMissing();
+                handlePhoneInvalid();
+              }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
               Submit
