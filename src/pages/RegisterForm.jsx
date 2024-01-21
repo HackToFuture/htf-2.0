@@ -3,6 +3,8 @@ import RegLead from "../components/RegLead";
 import RegMem from "../components/RegMem";
 import { useNavigate } from "react-router-dom";
 import "../config/firebase";
+
+
 import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
 const RegisterForm = () => {
   const navigate = useNavigate();
@@ -11,18 +13,18 @@ const RegisterForm = () => {
       navigate("/");
     }
     const colRef = collection(db, "registration");
+
     getDocs(colRef)
       .then((snapshot) => {
-        let user = [];
-        snapshot.docs.forEach((doc) => {
-          user.push({ ...doc.data(), id: doc.id });
+        const isEmailRegistered = snapshot.docs.some((doc) => {
+          const user_data = { ...doc.data(), id: doc.id };
+          return user_data.lead.email === sessionStorage.getItem("email");
         });
-        user.forEach((user_data) => {
-          if (user_data.lead.email === sessionStorage.getItem("email")) {
-            alert("Leader email id is already registered");
-            navigate("/");
-          }
-        });
+    
+        if (isEmailRegistered) {
+          alert("Leader email id is already registered");
+          navigate("/");
+        }
       })
       .catch((err) => {
         console.log(err);
@@ -165,7 +167,13 @@ const RegisterForm = () => {
     const docRef = await addDoc(collection(db, "registration"), {
       ...teamData,
     });
-    alert("Registration successful");
+    // console.log(docRef.id)
+    if (docRef.id != null || undefined) {
+      alert("Registration successful");
+    }
+    else {
+      alert("Some error occured")
+    }
   };
 
   return (
