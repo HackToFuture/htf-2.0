@@ -8,30 +8,28 @@ import Submitted from "../components/Submitted/Submitted";
 const RegisterForm = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem("email") == undefined) {
+    if (sessionStorage.getItem("email") == undefined) {
       navigate("/");
     }
     const colRef = collection(db, "registration");
-    // getDocs(colRef)
-    //   .then((snapshot) => {
-    //     let user = [];
-    //     snapshot.docs.forEach((doc) => {
-    //       user.push({ ...doc.data(), id: doc.id });
-    //     });
-    //     user.forEach((user_data) => {
-    //       if (
-    //         user_data.lead.email ||
-    //         user_data.LeaderEmail === localStorage.getItem("email")
-    //       ) {
-    //         alert("Leader email id is already registered");
-    //         navigate("/");
-    //       }
-    //     });
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
+    getDocs(colRef)
+      .then((snapshot) => {
+        let user = [];
+        snapshot.docs.forEach((doc) => {
+          user.push({ ...doc.data(), id: doc.id });
+        });
+        user.forEach((user_data) => {
+          if (user_data.lead.email === sessionStorage.getItem("email")) {
+            alert("Leader email id is already registered");
+            navigate("/");
+          }
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   });
+
   const [member4, setMember4] = useState(false);
 
   const [teamData, setTeamData] = useState({
@@ -71,7 +69,7 @@ const RegisterForm = () => {
         gender: "",
       },
     ],
-    pdfFile: null, // i love pdfs
+    pdfLink: "", // i love pdfs
   });
 
   // function to handle change in team lead data
@@ -92,9 +90,14 @@ const RegisterForm = () => {
   };
 
   const handlePdfChange = (e) => {
-    const file = e.target.files[0];
-    setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
+    const link = e.target.value;
+    setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
   };
+
+  // const handlePdfChange = (e) => {
+  //   const file = e.target.files[0];
+  //   setTeamData((prevData) => ({ ...prevData, pdfFile: file }));
+  // };
 
   // function to check if any field is empty
   const [leadMissing, setLeadMissing] = useState(false);
@@ -156,12 +159,17 @@ const RegisterForm = () => {
     }
   };
   const db = getFirestore();
+  const db = getFirestore();
   const handleFormSubmission = async (e) => {
     e.preventDefault();
+    if (phoneError) {
+      alert("Invalid phone number");
+      return;
+    }
     const docRef = await addDoc(collection(db, "registration"), {
       ...teamData,
     });
-    alert("Data added");
+    alert("Registration successful");
   };
 
   return (
@@ -227,12 +235,12 @@ const RegisterForm = () => {
             </section>
           )}
           <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
-            <p className="mb-2 text-xl">Upload Abstract</p>
+            <p className="mb-2 text-xl">Upload Abstract Link</p>
             <input
               onChange={handlePdfChange}
-              type="file"
-              accept="application/pdf"
-              className="w-full bg-white bg-opacity-0 "
+              type="text"
+              required="required"
+              className="w-full bg-white border-2 border-blue2 rounded-xl bg-opacity-0 py-2 px-5"
             />
           </section>
           <section className="flex flex-col items-center">
