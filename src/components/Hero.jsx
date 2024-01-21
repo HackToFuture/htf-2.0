@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import htflogo from "../assets/hero-htf-main.svg";
 import RegModal from "./RegModal/RegModal";
+import DownloadRule from "./downloadRule";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -47,7 +48,10 @@ const Hero = () => {
           >
             <button>Register</button>
           </a> */}
-          <RegModal/>
+          <div className="flex flex-col p-2 sm:flex-row justify-center items-center ">
+            <RegModal />
+            <DownloadRule />
+          </div>
         </div>{" "}
         <div className="md:w-3/4">
           <dotlottie-player

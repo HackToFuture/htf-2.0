@@ -23,7 +23,7 @@ const RegModal = () => {
   return (
     <Popup
       trigger={
-        <button className="text-white bg-blue-500 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 ">
+        <button className="text-white bg-blue-500 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl lg:mr-6 ">
           Register
         </button>
       }

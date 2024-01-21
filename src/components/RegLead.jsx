@@ -55,9 +55,16 @@ const RegLead = ({ leadData, onLeadChange }) => {
           onLeadChange("year", e.target.value);
         }}
         value={leadData.year}
+        required
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       >
-        <option className="text-bg_color font-semibold">
+        <option
+          className="text-bg_color font-semibold"
+          value=""
+          disabled
+          selected
+          hidden
+        >
           Select Year of Study
         </option>
         <option value="1" className="text-bg_color font-semibold">
