@@ -162,12 +162,27 @@ const RegisterForm = () => {
       setPhoneError(false);
     }
   };
+
+  const [linkError, setLinkError] = useState(true);
+  const validLink = new RegExp("^(?:https://)?docs.google.com/document/d/.+$");
+
+  const handleLinkInvalid = () => {
+    if (teamData.pdfLink === "") return;
+    if (!validLink.test(teamData.pdfLink)) {
+      setLinkError(true);
+    } else {
+      setLinkError(false);
+    }
+  };
+
   const db = getFirestore();
+
   const handleFormSubmission = async (e) => {
     e.preventDefault();
 
     checkMissing();
     handlePhoneInvalid();
+    handleLinkInvalid();
 
     const formIsNotValid =
       phoneError ||
@@ -175,7 +190,7 @@ const RegisterForm = () => {
       mem2Missing ||
       mem3Missing ||
       mem4Missing ||
-      pdfMissing;
+      linkError;
 
     if (formIsNotValid == false) {
       setPopupIsOpen(true);
@@ -184,6 +199,11 @@ const RegisterForm = () => {
 
     if (phoneError) {
       alert("Invalid phone number");
+      return;
+    }
+
+    if (linkError) {
+      alert("Invalid abstract link. Please use Google Docs link only.");
       return;
     }
 
@@ -264,7 +284,7 @@ const RegisterForm = () => {
             <p className="mb-2 text-xl">Upload Abstract Link</p>
             <input
               onChange={handlePdfChange}
-              type="text"
+              type="url"
               required="required"
               className="w-full bg-white border-2 border-blue2 rounded-xl bg-opacity-0 py-2 px-5"
             />
@@ -282,8 +302,8 @@ const RegisterForm = () => {
             {mem4Missing && (
               <p className="text-red-500">Empty fields in Team Member 4</p>
             )}
-            {pdfMissing && (
-              <p className="text-red-500">Abstract not uploaded</p>
+            {linkError && (
+              <p className="text-red-500">Use only Google Docs link.</p>
             )}
             {phoneError && <p className="text-red-500">Invalid phone number</p>}
           </section>
