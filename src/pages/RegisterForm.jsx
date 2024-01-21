@@ -257,10 +257,10 @@ const RegisterForm = () => {
           </section>
           <section className="px-6 md:px-12 mt-6">
             <button
-              onClick={(e) => {
-                console.log({ teamData });
-                //   e.preventDefault();
-                //   // checkMissing();
+              onClick={() => {
+                //  console.log({ teamData });
+                //  e.preventDefault();
+                //  checkMissing();
                 handlePhoneInvalid();
               }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
