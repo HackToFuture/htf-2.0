@@ -7,7 +7,7 @@ import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
 const RegisterForm = () => {
   const navigate = useNavigate();
   useEffect(() => {
-    if (localStorage.getItem("email") == undefined) {
+    if (sessionStorage.getItem("email") == undefined) {
       navigate("/");
     }
     const colRef = collection(db, "registration");
@@ -18,10 +18,7 @@ const RegisterForm = () => {
           user.push({ ...doc.data(), id: doc.id });
         });
         user.forEach((user_data) => {
-          if (
-            user_data.lead.email ||
-            user_data.LeaderEmail === localStorage.getItem("email")
-          ) {
+          if (user_data.lead.email === sessionStorage.getItem("email")) {
             alert("Leader email id is already registered");
             navigate("/");
           }
