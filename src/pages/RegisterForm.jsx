@@ -3,11 +3,12 @@ import RegLead from "../components/RegLead";
 import RegMem from "../components/RegMem";
 import { useNavigate } from "react-router-dom";
 import "../config/firebase";
-
-
 import { getFirestore, addDoc, collection, getDocs } from "firebase/firestore";
 import Popup from "reactjs-popup";
+import { Link } from "react-router-dom";
 const RegisterForm = () => {
+  const [isEmailExists, setIsEmailExists] = useState(false);
+  const [popupIsOpen2, setPopupIsOpen2] = useState(false);
   const navigate = useNavigate();
   useEffect(() => {
     if (sessionStorage.getItem("email") == undefined) {
@@ -21,16 +22,22 @@ const RegisterForm = () => {
           const user_data = { ...doc.data(), id: doc.id };
           return user_data.lead.email === sessionStorage.getItem("email");
         });
-    
+
+        setIsEmailExists(isEmailRegistered);
+
         if (isEmailRegistered) {
+          setPopupIsOpen2(true);
+        }
+
+        /* if (isEmailRegistered) {
           alert("Leader email id is already registered");
           navigate("/");
-        }
+        } */
       })
       .catch((err) => {
         console.log(err);
       });
-  });
+  }, []);
 
   const [member4, setMember4] = useState(false);
 
@@ -170,7 +177,7 @@ const RegisterForm = () => {
       mem4Missing ||
       pdfMissing;
 
-    if(formIsNotValid == false ){
+    if (formIsNotValid == false) {
       setPopupIsOpen(true);
       setIsNotValid(true);
     }
@@ -179,16 +186,15 @@ const RegisterForm = () => {
       alert("Invalid phone number");
       return;
     }
-    
+
     const docRef = await addDoc(collection(db, "registration"), {
       ...teamData,
     });
     // console.log(docRef.id)
     if (docRef.id != null || undefined) {
-      alert("Registration successful");
-    }
-    else {
-      alert("Some error occured")
+      console.log("Registration successful");
+    } else {
+      console.log("Some error occured");
     }
   };
 
@@ -299,8 +305,33 @@ const RegisterForm = () => {
               closeOnEscape={false}
               onClose={() => setPopupIsOpen(false)}
             >
-              <div className="flex justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
-                <p>Registration successful</p>
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+                <p>Registration was successful</p>
+                <p>Email will be sent shortly</p>
+                <Link to="/">
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Go to Home
+                  </button>
+                </Link>
+              </div>
+            </Popup>
+          )}
+
+          {isEmailExists && (
+            <Popup
+              open={popupIsOpen2}
+              closeOnDocumentClick={false}
+              closeOnEscape={false}
+              onClose={() => setPopupIsOpen2(false)}
+            >
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+                <p>Team Lead email already exists</p>
+                <p>You are registered</p>
+                <Link to="/">
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
+                    Go to Home
+                  </button>
+                </Link>
               </div>
             </Popup>
           )}
