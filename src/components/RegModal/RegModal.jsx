@@ -43,10 +43,7 @@ const RegModal = () => {
           </div>
           <div className="content py-4 text-sm text-gray-700">
             {/* Your content goes here */}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a
-            nostrum. Dolorem, repellat quidem ut, minima sint vel eveniet
-            quibusdam voluptates delectus doloremque, explicabo tempore dicta
-            adipisci fugit amet dignissimos?
+            Dear participant, if you plan on registering for the 36-hour company themed hackathon, an abstract must be submitted along with your application. Please make a copy of <a className="border-b-4 border-blue-300" href="link for the abstract doc: https://docs.google.com/document/d/1b8UOI4Ptn2G0G_Gks3H4MfAa81GuI8QJqq2wPhnBVgY/edit?usp=sharing">this Google Document</a>, edit it to fill your abstract details, and copy the link with access set to "Anyone on the internet with the link can view".
           </div>
           <div className="actions flex flex-col justify-center mt-4">
             <button className="text-text_col_1 bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md mb-2">
