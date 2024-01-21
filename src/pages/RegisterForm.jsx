@@ -77,9 +77,10 @@ const RegisterForm = () => {
   // function to handle change in team lead data
   const handleLeadChange = (field, value) => {
     setTeamData((prevData) => ({
-      lead: { ...prevData.lead, ["email"]: localStorage.getItem("email") },
       ...prevData,
       lead: { ...prevData.lead, [field]: value },
+      
+      
     }));
   };
 
