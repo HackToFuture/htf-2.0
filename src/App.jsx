@@ -26,18 +26,18 @@ const App = () => {
                   <div id="hero">
                     <Hero />
                   </div>
-                  <div id="prize">
-                    <Prize />
-                  </div>
-                  <div id="theme">
-                    <Themes />
-                  </div>
                   <div
                     id="about"
                     className=" flex flex-col sm:flex-row justify-center"
                   >
                     <About Id="1" Img={eglogo} />
                     <About Id="0" Img={sjeclogo} />
+                  </div>
+                  <div id="prize">
+                    <Prize />
+                  </div>
+                  <div id="theme">
+                    <Themes />
                   </div>
                   <div id="faq">
                     <Faq />
