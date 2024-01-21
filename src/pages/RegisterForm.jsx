@@ -158,10 +158,14 @@ const RegisterForm = () => {
   const db = getFirestore();
   const handleFormSubmission = async (e) => {
     e.preventDefault();
+    if (phoneError) {
+      alert("Invalid phone number");
+      return;
+    }
     const docRef = await addDoc(collection(db, "registration"), {
       ...teamData,
     });
-    alert("Data added");
+    alert("Registration successful");
   };
 
   return (
