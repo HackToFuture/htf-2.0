@@ -6,7 +6,7 @@ const Prize = () => {
       <div className="flex flex-col justify-center bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 items-center rounded-xl px-6 md:px-10 py-12">
         <h2 className="text-2xl md:text-4xl font-inter font-bold mb-2 ">
           <span className="bg-gradient-right bg-clip-text text-transparent">
-            Prize Pool Rs. 2,00,000+
+            Prize Pool ₹ 2,00,000+
           </span>
         </h2>
         <div className="flex flex-col md:flex-row justify-center items-center md:px-10 w-full">
@@ -36,17 +36,17 @@ const Prize = () => {
                   </p>
                   <p>
                     {" "}
-                    <span className=" text-yellow-400">Rs. 40000</span> (per
+                    <span className=" text-yellow-400">₹ 40,000</span> (per
                     problem statement)
                   </p>
                 </div>
                 <div className="w-full mb-2 md:mb-0">
                   <p className="text-xl md:text-3xl font-semibold">
-                    First Runner-up.
+                    First Runner-Up
                   </p>
                   <p>
                     {" "}
-                    <span className=" text-yellow-400">Rs. 20000</span> (per
+                    <span className=" text-yellow-400">₹ 20,000</span> (per
                     problem statement)
                   </p>
                 </div>
@@ -61,13 +61,13 @@ const Prize = () => {
                   <p className="text-xl md:text-3xl font-semibold">
                     First place{" "}
                   </p>
-                  <p className="text-yellow-400">Rs. 15,000</p>
+                  <p className="text-yellow-400">₹ 15,000</p>
                 </div>
                 <div className="w-full">
                   <p className="text-xl md:text-3xl font-semibold">
-                    First Runner-up{" "}
+                    First Runner-Up{" "}
                   </p>
-                  <p className="text-yellow-400">Rs. 10,000</p>
+                  <p className="text-yellow-400">₹ 10,000</p>
                 </div>
               </div>
             </div>
