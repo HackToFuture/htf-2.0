@@ -206,16 +206,26 @@ const RegisterForm = () => {
       alert("Invalid abstract link. Please use Google Docs link only.");
       return;
     }
-
-    const docRef = await addDoc(collection(db, "registration"), {
-      ...teamData,
-    });
-    // console.log(docRef.id)
-    if (docRef.id != null || undefined) {
-      console.log("Registration successful");
-    } else {
-      console.log("Some error occured");
+    if (leadMissing) {
+      alert("Leader email id is missing")
     }
+    else {
+      try {
+        const docRef = await addDoc(collection(db, "registration"), {
+          ...teamData,
+        });
+      }
+      catch (err) {
+        alert(err)
+      }
+    }
+    
+    // console.log(docRef.id)
+    // if (docRef.id != null || undefined) {
+    //   console.log("Registration successful");
+    // } else {
+    //   console.log("Some error occured");
+    // }
   };
 
   return (
