@@ -322,6 +322,9 @@ const RegisterForm = () => {
               onClick={(e) => {
                 //  console.log({ teamData });
                 // e.preventDefault();
+                checkMissing();
+                handlePhoneInvalid();
+                handleLinkInvalid();
               }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
