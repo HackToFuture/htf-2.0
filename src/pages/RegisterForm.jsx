@@ -51,6 +51,7 @@ const RegisterForm = () => {
       year: "",
       gender: "",
       college: "",
+      status: "1",
     },
     members: [
       {
@@ -78,7 +79,7 @@ const RegisterForm = () => {
         gender: "",
       },
     ],
-    pdfLink: "", // i love pdfs
+    // pdfLink: "",
   });
 
   // function to handle change in team lead data
@@ -98,22 +99,26 @@ const RegisterForm = () => {
     });
   };
 
-  const handlePdfChange = (e) => {
-    const link = e.target.value;
-    setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
-  };
+  // const handlePdfChange = (e) => {
+  //   const link = e.target.value;
+  //   setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
+  // };
 
   // function to check if any field is empty
   const [leadMissing, setLeadMissing] = useState(false);
   const [mem2Missing, setMem2Missing] = useState(false);
   const [mem3Missing, setMem3Missing] = useState(false);
   const [mem4Missing, setMem4Missing] = useState(false);
-  const [pdfMissing, setPdfMissing] = useState(false);
+  // const [pdfMissing, setPdfMissing] = useState(false);
   const [popupIsOpen, setPopupIsOpen] = useState(false);
   const [isNotValid, setIsNotValid] = useState(false);
 
   function checkMissing() {
-    const { lead, members, pdfFile } = teamData;
+    const {
+      lead,
+      members,
+      // , pdfFile
+    } = teamData;
 
     for (let key in lead) {
       if (lead[key] === "") {
@@ -145,9 +150,9 @@ const RegisterForm = () => {
       }
     } else setMem4Missing(false);
 
-    if (pdfFile === null) {
-      setPdfMissing(true);
-    } else setPdfMissing(false);
+    // if (pdfFile === null) {
+    //   setPdfMissing(true);
+    // } else setPdfMissing(false);
   }
 
   // check if phone number is 10 digits or invalid
@@ -163,17 +168,17 @@ const RegisterForm = () => {
     }
   };
 
-  const [linkError, setLinkError] = useState(true);
-  const validLink = new RegExp("^(?:https://)?docs.google.com/document/d/.+$");
+  // const [linkError, setLinkError] = useState(true);
+  // const validLink = new RegExp("^(?:https://)?docs.google.com/document/d/.+$");
 
-  const handleLinkInvalid = () => {
-    if (teamData.pdfLink === "") return;
-    if (!validLink.test(teamData.pdfLink)) {
-      setLinkError(true);
-    } else {
-      setLinkError(false);
-    }
-  };
+  // const handleLinkInvalid = () => {
+  //   if (teamData.pdfLink === "") return;
+  //   if (!validLink.test(teamData.pdfLink)) {
+  //     setLinkError(true);
+  //   } else {
+  //     setLinkError(false);
+  //   }
+  // };
 
   const db = getFirestore();
 
@@ -182,15 +187,11 @@ const RegisterForm = () => {
 
     checkMissing();
     handlePhoneInvalid();
-    handleLinkInvalid();
+    // handleLinkInvalid();
 
     const formIsNotValid =
-      phoneError ||
-      leadMissing ||
-      mem2Missing ||
-      mem3Missing ||
-      mem4Missing ||
-      linkError;
+      phoneError || leadMissing || mem2Missing || mem3Missing || mem4Missing;
+    // || linkError;
 
     if (formIsNotValid == false) {
       setPopupIsOpen(true);
@@ -202,24 +203,22 @@ const RegisterForm = () => {
       return;
     }
 
-    if (linkError) {
-      alert("Invalid abstract link. Please use Google Docs link only.");
-      return;
-    }
+    // if (linkError) {
+    //   alert("Invalid abstract link. Please use Google Docs link only.");
+    //   return;
+    // }
     if (leadMissing) {
-      alert("Leader email id is missing")
-    }
-    else {
+      alert("Leader email id is missing");
+    } else {
       try {
         const docRef = await addDoc(collection(db, "registration"), {
           ...teamData,
         });
-      }
-      catch (err) {
-        alert(err)
+      } catch (err) {
+        alert(err);
       }
     }
-    
+
     // console.log(docRef.id)
     // if (docRef.id != null || undefined) {
     //   console.log("Registration successful");
@@ -290,7 +289,7 @@ const RegisterForm = () => {
               />
             </section>
           )}
-          <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
+          {/* <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
             <p className="mb-2 text-xl">Upload Abstract Link</p>
             <input
               onChange={handlePdfChange}
@@ -298,7 +297,7 @@ const RegisterForm = () => {
               required="required"
               className="w-full bg-white border-2 border-blue2 rounded-xl bg-opacity-0 py-2 px-5"
             />
-          </section>
+          </section> */}
           <section className="flex flex-col items-center">
             {leadMissing && (
               <p className="text-red-500">Empty fields in Team Lead</p>
@@ -312,9 +311,9 @@ const RegisterForm = () => {
             {mem4Missing && (
               <p className="text-red-500">Empty fields in Team Member 4</p>
             )}
-            {linkError && (
-              <p className="text-red-500">Use only Google Docs link.</p>
-            )}
+            {/* {linkError && ( */}
+            {/* <p className="text-red-500">Use only Google Docs link.</p> */}
+            {/* )} */}
             {phoneError && <p className="text-red-500">Invalid phone number</p>}
           </section>
           <section className="px-6 md:px-12 mt-6">
@@ -324,7 +323,7 @@ const RegisterForm = () => {
                 // e.preventDefault();
                 checkMissing();
                 handlePhoneInvalid();
-                handleLinkInvalid();
+                // handleLinkInvalid();
               }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
@@ -358,8 +357,9 @@ const RegisterForm = () => {
               onClose={() => setPopupIsOpen2(false)}
             >
               <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
-                <p>Team Lead email already exists</p>
-                <p>You are registered</p>
+                {/* <p>Team Lead email already exists</p> */}
+                <p>You have already registered.</p>
+                <p>Check your email for further information.</p>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
                     Go to Home
