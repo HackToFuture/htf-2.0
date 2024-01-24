@@ -104,9 +104,12 @@ export default function Abstract() {
           <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
             Abstract Submission
           </h1>
+          <h1 className="text-center text-2xl lg:text-3xl font-inter font-bold text-text_col_1 my-6">
+            Welcome, {sessionStorage.getItem("email")}
+          </h1>
           <p className="text-text_col_1 my-6 mx-14 text-center ">
-            Abstracts to be submitted by 01 Febraury 2024. Login through same
-            Google account.
+            Submit your abstract link by 01 Febraury 2024. This can be done
+            later as well by logging in through same Google account.
           </p>
           <form
             action=""
