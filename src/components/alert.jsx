@@ -11,7 +11,7 @@ export default function alert() {
   while (show) {
     return (
       <>
-        <div className="w-5/6 h-24 p-5 bg-blue-500 shadow-inner rounded-lg flex flex-col items-center justify-center text-white relative">
+        <div className="w-5/6 h-42 p-5 bg-blue-500 shadow-inner rounded-lg flex flex-col items-center justify-center text-white relative lg:h-24">
           <div className="flex items-center justify-center">
             <h1 className="text-2xl font-bold">UPDATES</h1>
             <button
