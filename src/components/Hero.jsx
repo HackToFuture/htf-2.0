@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import htflogo from "../assets/hero-htf-main.svg";
 import RegModal from "./RegModal/RegModal";
 import DownloadRule from "./downloadRule";
+import Alert from "./alert";
 
 const Hero = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -21,6 +22,9 @@ const Hero = () => {
 
   return (
     <div className="py-20 md:py-20">
+      <div className="flex flex-col md:flex-row items-center px-2 md:px-0 my-4 w-full justify-center h-2/3">
+        <Alert />
+      </div>
       <div className="flex flex-col md:flex-row items-center px-5 md:px-0 my-8 w-full">
         {/* might need to change md:w-96 later */}
         <div className="flex flex-col bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl lg:w-4/5 mx-1 md:mx-7 md:w-96 py-10 p-6 md:p-10 justify-center items-start">
