@@ -11,6 +11,7 @@ import Themes from "./components/Themes";
 import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
 import eglogo from "./assets/eg-logo-red-white.png";
 import RegisterForm from "./pages/RegisterForm";
+import Abstract from "./pages/abstractsubmit";
 
 const App = () => {
   return (
@@ -56,6 +57,7 @@ const App = () => {
                 </>
               }
             />
+            <Route path="/submit" element={<Abstract />} />
           </Routes>
         </div>
       </Router>
