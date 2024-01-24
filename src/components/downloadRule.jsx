@@ -1,5 +1,5 @@
 import React from "react";
-import Pdf from "/public/HTF-Rule-Book.pdf";
+import Pdf from "/htf-rulebook-jan-24.pdf";
 
 export default function downloadRule() {
   return (
