@@ -11,6 +11,10 @@ import {
 import { useNavigate } from "react-router-dom";
 
 export default function Abstract() {
+  const [currentUserDetails, setCurrentUserDetails] = useState({
+    
+  })
+  const [pdfLink,setPdfLink ] = useState(null)
   const db = getFirestore();
 
   const navigate = useNavigate();
@@ -23,10 +27,10 @@ export default function Abstract() {
   });
 
   useEffect(() => {
-    navigate("/");
-    if (sessionStorage.getItem("email") == undefined) {
-      navigate("/");
-    }
+    // navigate("/");
+    // if (sessionStorage.getItem("email") == undefined) {
+    //   navigate("/");
+    // }
 
     const colRef = collection(db, "registration");
 
@@ -35,8 +39,10 @@ export default function Abstract() {
     getDocs(colRef)
       .then((snapshot) => {
         const isEmailRegistered = snapshot.docs.some((doc) => {
+          setCurrentUserDetails({ ...doc.data() ,id:doc.id})
           const user_data = { ...doc.data(), id: doc.id };
           return user_data.lead.email === sessionStorage.getItem("email");
+          
         });
 
         // setIsEmailExists(isEmailRegistered);
@@ -45,10 +51,10 @@ export default function Abstract() {
         //   setPopupIsOpen2(true);
         // }
 
-        /* if (isEmailRegistered) {
-          alert("Leader email id is already registered");
+        if (!isEmailRegistered) {
+          alert("This email id is not registered");
           navigate("/");
-        } */
+        } 
       })
       .catch((err) => {
         console.log(err);
@@ -58,13 +64,19 @@ export default function Abstract() {
   const [linkError, setLinkError] = useState(false);
   const validLink = new RegExp("^(?:https://)?docs.google.com/document/d/.+$");
 
-  const handleLinkInvalid = () => {
-    // if (teamData.pdfLink === "") return;
-    // if (!validLink.test(teamData.pdfLink) || teamData.pdfLink != "") {
-    //   setLinkError(true);
-    // } else {
-    //   setLinkError(false);
-    // }
+  const handleLinkInvalid = (e) => {
+    console.log("Called")
+    console.log(pdfLink)
+    if (pdfLink === null) {
+      setLinkError(true);
+    };
+    if (!validLink.test(pdfLink) ||pdfLink == "") {
+      setLinkError(true);
+    } else {
+      setLinkError(false);
+      handleFormSubmission(e)
+    }
+   
   };
 
   if (linkError) {
@@ -72,24 +84,28 @@ export default function Abstract() {
     // return;
   }
 
-  const handleLeadChange = (field, value) => {
-    setTeamData((prevData) => ({
-      ...prevData,
-      lead: { ...prevData.lead, [field]: value },
-    }));
-  };
+  // const handleLeadChange = (field, value) => {
+  //   setTeamData((prevData) => ({
+  //     ...prevData,
+  //     lead: { ...prevData.lead, [field]: value },
+  //   }));
+  // };
 
   const handlePdfChange = (e) => {
-    const link = e.target.value;
-    setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
+    // const link = e.target.value;
+    // setTeamData((prevData) => ({ ...prevData, pdfLink: link }));
+    setPdfLink(e.target.value)
   };
 
   const handleFormSubmission = (e) => {
     e.preventDefault();
+    console.log(currentUserDetails)
+    const userDetails = { ...currentUserDetails }
+    userDetails.lead.status = "2"
+    userDetails.lead.pdfLink = pdfLink
+    const submit = doc(db, "registration", currentUserDetails.id);
 
-    const submit = doc(db, "registration", sessionStorage.getItem("email"));
-
-    updateDoc(submit, { status: "2" }, { pdfLink: link })
+    updateDoc(submit,userDetails)
       .then(() => {
         console.log("Document successfully updated!");
       })
@@ -115,7 +131,7 @@ export default function Abstract() {
           <form
             action=""
             onSubmit={(e) => {
-              handleFormSubmission(e);
+             handleLinkInvalid(e)
             }}
           >
             <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
@@ -128,13 +144,13 @@ export default function Abstract() {
               />
             </section>
             <button
-              onClick={(e) => {
-                e.preventDefault();
-                // checkMissing();
-                handleLinkInvalid();
-                // handleFormSubmission(e);
-                submitForm();
-              }}
+              // onClick={(e) => {
+              //   e.preventDefault();
+              //   // checkMissing();
+              //   handleLinkInvalid();
+              //   // handleFormSubmission(e);
+              //   submitForm();
+              // }}
               className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
             >
               Submit
