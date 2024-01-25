@@ -43,7 +43,7 @@ const RegModal = () => {
           </div>
           <div className="content py-4 text-sm text-gray-700">
             {/* Your content goes here */}
-            Dear participant, if you plan on registering for the 36-hour company
+            {/* Dear participant, if you plan on registering for the 36-hour company
             themed hackathon, an abstract must be submitted along with your
             application. Please make a copy of{" "}
             <a
@@ -54,7 +54,22 @@ const RegModal = () => {
               this Google Document
             </a>
             , edit it to fill your abstract details, and copy the link with
-            access set to "Anyone on the internet with the link can view".
+            access set to "Anyone on the internet with the link can view". */}
+            Dear participants, while registering for the upcoming 36-hour
+            company-themed hackathon, please be aware that the open theme is
+            exclusively for first-year participants. There is no need to submit
+            abstracts during registration; however, we kindly request that you
+            submit your abstract before February 1.
+            <p>
+              {" "}
+              <a
+                href="https://docs.google.com/document/d/1b8UOI4Ptn2G0G_Gks3H4MfAa81GuI8QJqq2wPhnBVgY/edit?usp=sharing"
+                target="_blank"
+                className="border-b-2 border-blue-300 text-blue-500 font-bold"
+              >
+                Format of abstract submission{" "}
+              </a>
+            </p>
           </div>
           <div className="actions flex flex-col justify-center mt-4">
             <button
@@ -69,7 +84,7 @@ const RegModal = () => {
               className="w-full"
             >
               <button className="text-text_col_1 w-full bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md">
-                Open theme
+                Open theme : 1st years only
               </button>
             </a>
           </div>
