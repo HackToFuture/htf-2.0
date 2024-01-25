@@ -1,26 +1,30 @@
 [
-    {
-      "question": "What is a Hackathon?",
-      "answer": "A hackathon is an event where people engage in rapid and collaborative engineering over a relatively short period of time such as 24 or 48 hours."
-    },
-    {
-      "question": "Will the hackathon be an online or offline event?",
-      "answer": "The event will be held offline."
-    },
-    {
-      "question": "Who can participate?",
-      "answer": "HackToFuture is open to all BE, B. Tech, BCA, MCA and MBA students in and around Karnataka."
-    },
-    {
-      "question": "Do I have to pay to participate?",
-      "answer": "Absolutely not! Participation is completely free."
-    },
-    {
-      "question": "What is the team size to participate in the hackathon?",
-      "answer": "You may participate in teams of size 3 - 4."
-    },
-    {
-      "question": "Are inter-college teams allowed?",
-      "answer": "No. Though inter-specialisation and inter-year teams are allowed."
-    }
-  ]
+  {
+    "question": "What is a Hackathon?",
+    "answer": "A hackathon is an event where people engage in rapid and collaborative engineering over a relatively short period of time such as 24 or 48 hours."
+  },
+  {
+    "question": "Will the hackathon be an online or offline event?",
+    "answer": "The event will be held offline."
+  },
+  {
+    "question": "Who can participate?",
+    "answer": "HackToFuture is open to all BE, B. Tech, BCA, MCA and MBA students in and around Karnataka."
+  },
+  {
+    "question": "Do I have to pay to participate?",
+    "answer": "Absolutely not! Participation is completely free."
+  },
+  {
+    "question": "What is the team size to participate in the hackathon?",
+    "answer": "You may participate in teams of size 3 - 4."
+  },
+  {
+    "question": "Are inter-college teams allowed?",
+    "answer": "No. Though inter-specialisation and inter-year teams are allowed."
+  },
+  {
+    "question": "Why should you choose company specific theme?",
+    "answer": "You will be eligible to get an internship from EGDK."
+  }
+]

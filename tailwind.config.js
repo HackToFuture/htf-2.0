@@ -17,6 +17,7 @@ export default {
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
+        urbanist: ["Urbanist", "sans-serif"],
       },
       backgroundImage: (theme) => ({
         "gradient-right": "linear-gradient(to right, #008ed8, #4bbdfa)",

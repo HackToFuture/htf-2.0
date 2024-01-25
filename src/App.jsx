@@ -17,7 +17,7 @@ const App = () => {
   return (
     <>
       <Router>
-        <div id="bgimg">
+        <div id="bgimg " className="font-urbanist">
           <Routes>
             <Route
               path="/"
