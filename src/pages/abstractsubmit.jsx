@@ -23,6 +23,7 @@ export default function Abstract() {
   });
 
   useEffect(() => {
+    navigate("/");
     if (sessionStorage.getItem("email") == undefined) {
       navigate("/");
     }
