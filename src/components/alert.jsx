@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Close from "../assets/close.svg";
 
 const alert = () => {
   const [show, setShow] = useState(true);
