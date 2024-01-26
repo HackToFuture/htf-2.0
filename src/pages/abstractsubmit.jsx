@@ -5,13 +5,14 @@ import { auth, provider } from "../config/firebase";
 import { getFirestore, doc, addDoc, updateDoc, collection, getDocs } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 
-
 export default function Abstract() {
     const [currentUserDetails, setCurrentUserDetails] = useState({});
     const [loggedInUser, setLoggedInUser] = useState(null);
     const [isCurrentUserRegistered, setIsCurrentUserRegistered] = useState(true);
     const [pdfLink, setPdfLink] = useState(null);
     const db = getFirestore();
+
+   
     const validation = () => {
         const colRef = collection(db, "registration");
         // const submit = doc(db, "registration", sessionStorage.getItem("email"));
@@ -19,14 +20,15 @@ export default function Abstract() {
             .then((snapshot) => {
                 const isEmailRegistered = snapshot.docs.some((doc) => {
                     setCurrentUserDetails({ ...doc.data(), id: doc.id });
-                    const user_data = { ...doc.data(), id: doc.id };
+                    const user_data = { ...doc.data(), id: doc.id }
                     return user_data.lead.email === sessionStorage.getItem("email");
                 });
-                // setIsEmailExists(isEmailRegistered);
-
-                // if (isEmailRegistered) {
-                //   setPopupIsOpen2(true);
-                // }
+                // if (currentUserDetails.lead.pdfLink != undefined) {
+                //     console.log("Abstract alraedy submitted")
+                //     navigate("/")
+                //    }
+                // console.log(currentUserDetails)
+                // setIsEmailExists(isEmailRegistered)
 
                 if (!isEmailRegistered) {
                     setIsCurrentUserRegistered(false);
@@ -39,12 +41,12 @@ export default function Abstract() {
                 console.log(err);
             });
     };
-
     const googleAuth = () => {
         signInWithPopup(auth, provider).then((data) => {
             sessionStorage.setItem("email", data.user.email);
             sessionStorage.setItem("name", data.user.displayName);
             setLoggedInUser(data.user.displayName);
+            validation()
         });
     };
     const navigate = useNavigate();
@@ -61,10 +63,10 @@ export default function Abstract() {
             googleAuth();
         } else {
             validation();
-      }
-      // return () => {
-      //   googleAuth()
-      // }
+        }
+        // return () => {
+        //   googleAuth()
+        // }
     }, []);
 
     const [linkError, setLinkError] = useState(false);
@@ -109,8 +111,8 @@ export default function Abstract() {
             console.log(currentUserDetails);
             const userDetails = { ...currentUserDetails };
             userDetails.lead.status = "2";
-          userDetails.lead.pdfLink = pdfLink;
-          userDetails.lead.last_updated = new Date();
+            userDetails.lead.pdfLink = pdfLink;
+            userDetails.lead.last_updated = new Date();
             const submit = doc(db, "registration", currentUserDetails.id);
 
             updateDoc(submit, userDetails)
