@@ -13,7 +13,6 @@ export default function Abstract() {
     const [pdfLink, setPdfLink] = useState(null);
     const db = getFirestore();
     const validation = () => {
-        console.log("Validation called");
         const colRef = collection(db, "registration");
         // const submit = doc(db, "registration", sessionStorage.getItem("email"));
         getDocs(colRef)
@@ -73,7 +72,6 @@ export default function Abstract() {
 
     const handleLinkInvalid = (e) => {
         e.preventDefault();
-        console.log("Called");
         console.log(pdfLink);
         if (pdfLink === null) {
             setLinkError(true);
@@ -117,7 +115,7 @@ export default function Abstract() {
 
             updateDoc(submit, userDetails)
                 .then(() => {
-                    console.log("Document successfully updated!");
+                    alert("Document successfully updated!");
                 })
                 .catch((error) => {
                     console.error("Error updating document: ", error);
