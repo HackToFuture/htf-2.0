@@ -422,6 +422,7 @@ const RegisterForm = () => {
             </Popup>
           )}
 
+          {isEmailExists && navigate("/submit")}
           {isEmailExists && (
             <Popup
               open={popupIsOpen2}
