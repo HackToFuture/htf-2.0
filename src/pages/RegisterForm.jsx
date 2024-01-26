@@ -44,6 +44,8 @@ const RegisterForm = () => {
   const [teamData, setTeamData] = useState({
     lead: {
       // data for RegLead
+      Registration_Date_time: new Date(),
+      last_updated:null,
       teamName: "",
       name: "",
       email: "",
