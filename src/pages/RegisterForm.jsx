@@ -45,7 +45,7 @@ const RegisterForm = () => {
     lead: {
       // data for RegLead
       Registration_Date_time: new Date(),
-      last_updated:null,
+      last_updated: null,
       teamName: "",
       name: "",
       email: "",
@@ -399,16 +399,23 @@ const RegisterForm = () => {
               closeOnEscape={false}
               onClose={() => setPopupIsOpen(false)}
             >
-              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-auto p-8 rounded-xl font-inter font-medium text-xl text-center">
                 {/* <p>Registration was successful.</p>
                 <p>Email will be sent shortly.</p> */}
                 <p>Registered Successfully.</p>
-                <p>Abstract Submission is open.</p>
-                <Link to={"/submit"}>Click here to submit Abstract</Link>
-                <p>Check your email for further information.</p>
+                <p>Further communication will be done through email.</p>
+                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                <Link
+                  to={"/submit"}
+                  // className="border-b-2 border-blue-300 text-blue-500 font-bold"
+                >
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Click here to submit Abstract
+                  </button>
+                </Link>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Go to Home
+                    Go to Homepage
                   </button>
                 </Link>
               </div>
@@ -422,14 +429,22 @@ const RegisterForm = () => {
               closeOnEscape={false}
               onClose={() => setPopupIsOpen2(false)}
             >
-              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-auto p-8 rounded-xl font-inter font-medium text-xl text-center">
                 {/* <p>Team Lead email already exists</p> */}
                 <p>You have already registered.</p>
-                <Link to={"/submit"}>Click here to submit Abstract</Link>
-                <p>Check your email for further information.</p>
+                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                {/* <p>Check your email for further information.</p> */}
+                <Link
+                  to={"/submit"}
+                  // className="border-b-2 border-blue-300 text-blue-500 font-bold"
+                >
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
+                    Abstract Submission
+                  </button>
+                </Link>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-                    Go to Home
+                    Go to Homepage
                   </button>
                 </Link>
               </div>
