@@ -403,7 +403,8 @@ const RegisterForm = () => {
                 {/* <p>Registration was successful.</p>
                 <p>Email will be sent shortly.</p> */}
                 <p>Registered Successfully.</p>
-                <p>Abstract Submission opens soon.</p>
+                <p>Abstract Submission is open.</p>
+                <Link to={"/submit"}>Click here to submit Abstract</Link>
                 <p>Check your email for further information.</p>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -424,6 +425,7 @@ const RegisterForm = () => {
               <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
                 {/* <p>Team Lead email already exists</p> */}
                 <p>You have already registered.</p>
+                <Link to={"/submit"}>Click here to submit Abstract</Link>
                 <p>Check your email for further information.</p>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
