@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Close from "../assets/close.svg";
+import { Link } from "react-router-dom";
 
 const alert = () => {
   const [show, setShow] = useState(true);
@@ -51,7 +52,13 @@ const alert = () => {
               2024.
             </p>
             <div className="mb-2" />
-            <p>Rule Book updated. Eligibility criteria changed.</p>
+            {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
+            <Link
+              to={"submit"}
+              className="border-2 p-2 rounded border-blue-300 text-blue-100 font-bold text-xl"
+            >
+              Abstract Submission
+            </Link>
           </div>
         </div>
       </>
