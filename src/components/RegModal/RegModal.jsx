@@ -16,6 +16,7 @@ const RegModal = () => {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email);
       sessionStorage.setItem("email", data.user.email);
+      sessionStorage.setItem("name",data.user.displayName)
       setAuthDone(true);
       navigate("/registration");
     });
