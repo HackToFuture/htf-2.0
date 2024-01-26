@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import Close from "../assets/close.svg";
 
 export default function alert() {
   const [show, setShow] = useState(true);
@@ -15,10 +16,10 @@ export default function alert() {
           <div className="flex items-center justify-center">
             <h1 className="text-2xl font-bold">UPDATES</h1>
             <button
-              className="right-3 top-1 absolute font-bold"
+              className="right-2 top-1 absolute font-bold"
               onClick={handleClose}
             >
-              X
+              <img src={Close} alt="close" className="w-6 invert" />
             </button>
           </div>
           <div className="flex flex-col items-center justify-center text-justify">
