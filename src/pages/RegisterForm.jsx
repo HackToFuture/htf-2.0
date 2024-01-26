@@ -229,6 +229,28 @@ const RegisterForm = () => {
     // }
   };
 
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [hasNotScrolled, setHasNotScrolled] = useState(true);
+
+  useEffect(() => {
+    if (window.scrollY === 0 && hasNotScrolled) setPopupOpen(true);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0 && hasNotScrolled) setPopupOpen(true);
+      else {
+        setPopupOpen(false);
+        setHasNotScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasNotScrolled]);
+
   return (
     <div className="flex justify-center h-auto">
       <div className="w-11/12 md:w-2/5 mt-24 md:mt-32 mb-10 pb-10 bg-bg_color bg-opacity-20 backdrop-blur-blur1">
@@ -260,6 +282,44 @@ const RegisterForm = () => {
               </div>
             </div>
             <RegLead leadData={teamData.lead} onLeadChange={handleLeadChange} />
+          </section>
+          <section>
+            <Popup open={popupOpen}>
+              <div className="flex flex-row justify-center items-center bg-white lg:w-64 h-20 rounded-xl font-inter font-semibold text-lg text-center lg:fixed mb-96 lg:top-48 lg:right-40">
+                <div className="flex-shrink-0 scale-110 hidden lg:block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                  </svg>
+                </div>
+
+                <p className="w-3/4">Choose your team size here</p>
+                <div className="ml-4 scale-125 block lg:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Popup>
           </section>
           {/* Team member 1 */}
           <section className="mt-8 px-6 md:px-12">
