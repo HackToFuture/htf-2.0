@@ -39,7 +39,7 @@ export default function Abstract() {
       setCurrentUserDetails(user_data);
   
       if (user_data.lead.pdfLink !== undefined) {
-        alert("Abstarction already submitted");
+        alert("Abstract already submitted");
         navigate("/");
       }
     } catch (error) {
