@@ -285,8 +285,8 @@ const RegisterForm = () => {
           </section>
           <section>
             <Popup open={popupOpen}>
-              <div className="flex flex-row justify-center items-center bg-white lg:w-64 h-20 rounded-xl font-inter font-semibold text-lg text-center lg:fixed mb-96 lg:top-48 lg:right-40">
-                <div className="flex-shrink-0 scale-110 hidden lg:block">
+              <div className="flex flex-row justify-center items-center bg-white lg:w-64 h-20 rounded-xl font-inter font-semibold text-lg text-center fixed top-60 right-14 md:top-48 md:right-40">
+                <div className="flex-shrink-0 scale-110 hidden md:block">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -303,7 +303,7 @@ const RegisterForm = () => {
                 </div>
 
                 <p className="w-3/4">Choose your team size here</p>
-                <div className="ml-4 scale-125 block lg:hidden">
+                <div className="ml-4 scale-125 block md:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
