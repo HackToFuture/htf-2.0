@@ -48,7 +48,7 @@ const alert = () => {
             <li>Rule Book updated.</li>
           </ul> */}
             <p>
-              Registrations are open. Abstracts to be submitted by 01 Febraury
+              Registrations are open. Abstracts to be submitted by 01 February
               2024.
             </p>
             <div className="mb-2" />
