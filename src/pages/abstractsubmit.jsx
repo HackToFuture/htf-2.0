@@ -20,36 +20,33 @@ export default function Abstract() {
   const [pdfLink, setPdfLink] = useState(null);
   const db = getFirestore();
 
-  const validation = () => {
-    const colRef = collection(db, "registration");
-    // const submit = doc(db, "registration", sessionStorage.getItem("email"));
-    getDocs(colRef)
-      .then((snapshot) => {
-        const isEmailRegistered = snapshot.docs.some((doc) => {
-          setCurrentUserDetails({ ...doc.data(), id: doc.id });
-          const user_data = { ...doc.data(), id: doc.id };
-          return user_data.lead.email === sessionStorage.getItem("email");
-        });
-        // if (currentUserDetails.lead.pdfLink != undefined) {
-        //     console.log("Abstract alraedy submitted")
-        //     navigate("/")
-        //    }
-        // console.log(currentUserDetails)
-        // setIsEmailExists(isEmailRegistered)
-
-        if (!isEmailRegistered) {
-          setIsCurrentUserRegistered(false);
-          alert(
-            "This email is not registered.\nPlease register first to proceed"
-          );
-          navigate("/registration");
-          return;
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  const validation = async () => {
+    try {
+      const colRef = collection(db, "registration");
+      const snapshot = await getDocs(colRef);
+  
+      const user_data = snapshot.docs
+        .map((doc) => ({ ...doc.data(), id: doc.id }))
+        .find((data) => data.lead.email === sessionStorage.getItem("email"));
+  
+      if (!user_data) {
+        setIsCurrentUserRegistered(false);
+        alert("This email is not registered.\nPlease register first to proceed");
+        navigate("/registration");
+        return;
+      }
+  
+      setCurrentUserDetails(user_data);
+  
+      if (user_data.lead.pdfLink !== undefined) {
+        alert("Abstarction already submitted");
+        navigate("/");
+      }
+    } catch (error) {
+      console.error("Error in validation:", error);
+    }
   };
+  
   const googleAuth = () => {
     signInWithPopup(auth, provider).then((data) => {
       sessionStorage.setItem("email", data.user.email);
