@@ -87,7 +87,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         }}
         value={leadData.college}
         type="text"
-        placeholder="Enter College Name"
+        placeholder="Enter College Name (Enter full name with city)"
         className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
       />
       <div className="flex justify-center">
