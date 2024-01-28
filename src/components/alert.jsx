@@ -49,7 +49,7 @@ const alert = () => {
           </ul> */}
             <p>
               Registrations are open. Abstracts to be submitted by 01 February
-              2024.
+              2024. PS2 Updated.
             </p>
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}

@@ -32,7 +32,7 @@ const Themes = () => {
           </h2>
           <p className="p-4">
             Create a blockchain-powered platform allowing users to lease their
-            information to social media services, with the assurance that the
+            information to various services, with the assurance that the
             data will not be retained upon exiting the service.
           </p>
         </div>
