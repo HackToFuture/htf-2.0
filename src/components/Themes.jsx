@@ -32,8 +32,8 @@ const Themes = () => {
           </h2>
           <p className="p-4">
             Create a blockchain-powered platform allowing users to lease their
-            information to social media services, with the assurance that the
-            data will not be retained upon exiting the service.
+            information to various services, with the assurance that the data
+            will not be retained upon exiting the service.
           </p>
         </div>
         <img
@@ -67,8 +67,7 @@ const Themes = () => {
           </h2>
           <p className="p-4">
             Work on your own problem statement under the theme 'Social
-            Innovation'. Open to first and second semester students of 
-            BE only.
+            Innovation'. Open to first and second semester students of BE only.
           </p>
         </div>
         <img
