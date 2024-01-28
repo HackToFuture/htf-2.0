@@ -45,7 +45,7 @@ const RegisterForm = () => {
     lead: {
       // data for RegLead
       Registration_Date_time: new Date(),
-      last_updated:null,
+      last_updated: null,
       teamName: "",
       name: "",
       email: "",
@@ -229,6 +229,28 @@ const RegisterForm = () => {
     // }
   };
 
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [hasNotScrolled, setHasNotScrolled] = useState(true);
+
+  useEffect(() => {
+    if (window.scrollY === 0 && hasNotScrolled) setPopupOpen(true);
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY === 0 && hasNotScrolled) setPopupOpen(true);
+      else {
+        setPopupOpen(false);
+        setHasNotScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [hasNotScrolled]);
+
   return (
     <div className="flex justify-center h-auto">
       <div className="w-11/12 md:w-2/5 mt-24 md:mt-32 mb-10 pb-10 bg-bg_color bg-opacity-20 backdrop-blur-blur1">
@@ -260,6 +282,44 @@ const RegisterForm = () => {
               </div>
             </div>
             <RegLead leadData={teamData.lead} onLeadChange={handleLeadChange} />
+          </section>
+          <section>
+            <Popup open={popupOpen}>
+              <div className="flex flex-row justify-center items-center bg-white lg:w-64 h-20 rounded-xl font-inter font-semibold text-lg text-center fixed top-60 right-14 md:top-48 md:right-40">
+                <div className="flex-shrink-0 scale-110 hidden md:block">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 12H5M12 19l-7-7 7-7" />
+                  </svg>
+                </div>
+
+                <p className="w-3/4">Choose your team size here</p>
+                <div className="ml-4 scale-125 block md:hidden">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="24"
+                    height="24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                  </svg>
+                </div>
+              </div>
+            </Popup>
           </section>
           {/* Team member 1 */}
           <section className="mt-8 px-6 md:px-12">
@@ -339,21 +399,30 @@ const RegisterForm = () => {
               closeOnEscape={false}
               onClose={() => setPopupIsOpen(false)}
             >
-              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-auto p-8 rounded-xl font-inter font-medium text-xl text-center">
                 {/* <p>Registration was successful.</p>
                 <p>Email will be sent shortly.</p> */}
                 <p>Registered Successfully.</p>
-                <p>Abstract Submission opens soon.</p>
-                <p>Check your email for further information.</p>
+                <p>Further communication will be done through email.</p>
+                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                <Link
+                  to={"/submit"}
+                  // className="border-b-2 border-blue-300 text-blue-500 font-bold"
+                >
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                    Click here to submit Abstract
+                  </button>
+                </Link>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Go to Home
+                    Go to Homepage
                   </button>
                 </Link>
               </div>
             </Popup>
           )}
 
+          {isEmailExists && navigate("/submit")}
           {isEmailExists && (
             <Popup
               open={popupIsOpen2}
@@ -361,13 +430,22 @@ const RegisterForm = () => {
               closeOnEscape={false}
               onClose={() => setPopupIsOpen2(false)}
             >
-              <div className="flex flex-col justify-center items-center bg-white w-96 h-60 rounded-xl font-inter font-medium text-xl text-center">
+              <div className="flex flex-col justify-center items-center bg-white w-96 h-auto p-8 rounded-xl font-inter font-medium text-xl text-center">
                 {/* <p>Team Lead email already exists</p> */}
                 <p>You have already registered.</p>
-                <p>Check your email for further information.</p>
+                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                {/* <p>Check your email for further information.</p> */}
+                <Link
+                  to={"/submit"}
+                  // className="border-b-2 border-blue-300 text-blue-500 font-bold"
+                >
+                  <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
+                    Abstract Submission
+                  </button>
+                </Link>
                 <Link to="/">
                   <button className="mt-4 bg-blue1 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-xl">
-                    Go to Home
+                    Go to Homepage
                   </button>
                 </Link>
               </div>
