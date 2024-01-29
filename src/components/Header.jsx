@@ -149,7 +149,7 @@ const Header = () => {
       )}
       {isOpen && (
         <div className="fixed top-20 right-2 h-auto w-48 py-4" id="hammenu">
-          <ul className="flex flex-col text-lg items-center font-urbanist font-medium text-text_col_1 ">
+          <ul className="flex flex-col text-lg items-center font-urbanist font-medium text-text_col_1 cursor-pointer">
             <li className="transition px-8 hover:text-black">
               <Link
                 activeClass="active"
@@ -161,7 +161,8 @@ const Header = () => {
               >
                 About
               </Link>
-              <li className="transition px-8 hover:text-black"></li>
+            </li>
+            <li className="transition px-8 hover:text-black">
               <Link
                 activeClass="active"
                 to="prize"
