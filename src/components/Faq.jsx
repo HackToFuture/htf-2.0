@@ -11,7 +11,10 @@ const Faq = () => {
       </div>
       <div className="flex flex-col w-full items-start mt-4 mx-auto max-w-screen-md transition-all">
         {faqData.map((faq, index) => (
-          <div key={index} className="w-full mb-4">
+          <div
+            key={index}
+            className="w-full mb-4 ease-linear transition-all duration-500"
+          >
             <button
               className={`transition-all duration-300 bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 py-2 px-7 text-lg urbanist font-medium leading-tight text-text_col_1 w-full text-left flex justify-between items-center ${
                 selectedQuestion === index
@@ -24,7 +27,7 @@ const Faq = () => {
             >
               {faq.question}
               <span
-                className={`text-text_col_1 transition-all duration-300 ${
+                className={`text-text_col_1 transition-all duration-300  ${
                   selectedQuestion === index ? "transform rotate-180" : ""
                 }`}
               >
@@ -32,7 +35,7 @@ const Faq = () => {
               </span>
             </button>
             {selectedQuestion === index && (
-              <p className=" bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 pt-2  pb-3 px-7 rounded-b-lg text-text_col_1 text-base font-urbanist font-medium leading-tight transition-all duration-300">
+              <p className=" bg-bg_color_2 bg-opacity-40 backdrop-blur-blur1 pt-2  pb-3 px-7 rounded-b-lg text-text_col_1 text-base font-urbanist font-medium leading-tight transition-all duration-300 ease-linear">
                 {faq.answer}
               </p>
             )}

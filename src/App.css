@@ -76,8 +76,8 @@ body {
   border: 1px solid #008ed8;
 }
 
-#hammenu {
-  background-image: linear-gradient(to right, #008ed8, #4bbdfa);
-  border: 1px solid #008ed8;
-  border-radius: 4px;
-}
+/* #hammenu { */
+/* background-image: linear-gradient(to right,  #4bbdfa); */
+/* border: 1px solid #008ed8; */
+/* border-radius: 4px; */
+/* } */

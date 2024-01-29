@@ -15,7 +15,7 @@ const alert = () => {
     show && (
       <>
         <div
-          className="w-11/12 md:w-3/5 h-full p-4 bg-blue-500 rounded-xl flex flex-col items-center justify-center text-white font-urbanist relative"
+          className="w-11/12 md:w-3/5 h-full p-4 bg-[#0097e4] rounded-xl flex flex-col items-center justify-center text-white font-urbanist relative"
           id="alertBanner"
         >
           <div className="flex items-center justify-center">
@@ -41,16 +41,17 @@ const alert = () => {
               </svg>
             </button>
           </div>
-          <div className="flex flex-col items-center text-md font-medium text-center px-6">
+          <div className="flex flex-col items-center text-lg font-large  text-center px-6">
             {/* <div className="  w-5/6 h-full rounded flex items-center justify-center"> */}
             {/* <ul className="font-3xl font-bold text-justify">
             <li>Registrations are open. Submit abstract later.</li>
             <li>Rule Book updated.</li>
           </ul> */}
-            <p>
+            {/* <p>
               Registrations are open. Abstracts to be submitted by 01 February
               2024.
-            </p>
+            </p> */}
+            <p>Registration extended upto 04 Febraury 2024.</p>
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
             <Link
