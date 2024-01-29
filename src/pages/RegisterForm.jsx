@@ -255,6 +255,9 @@ const RegisterForm = () => {
     <div className="flex justify-center h-auto">
       <div className="w-11/12 md:w-2/5 mt-24 md:mt-32 mb-10 pb-10 bg-bg_color bg-opacity-20 backdrop-blur-blur1">
         <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
+          Company Specific
+        </h1>
+        <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
           Registration
         </h1>
         <form
@@ -269,7 +272,7 @@ const RegisterForm = () => {
               <h2 className="text-2xl md:3xl font-inter font-bold text-text_col_1 ">
                 Team Lead
               </h2>
-              <div>
+              {/* <div>
                 <button
                   onClick={(e) => {
                     e.preventDefault();
@@ -277,14 +280,14 @@ const RegisterForm = () => {
                   }}
                   className="bg-blue1 px-4 py-2 rounded-3xl text-text_col_1 font-inter font-semibold"
                 >
-                  {member4 ? <p>4 Members</p> : <p>3 Members</p>}
+                  {member4 ? <p>Remove 4th Member</p> : <p>Add 4th Member</p>}
                 </button>
-              </div>
+              </div> */}
             </div>
             <RegLead leadData={teamData.lead} onLeadChange={handleLeadChange} />
           </section>
           <section>
-            <Popup open={popupOpen}>
+            {/* <Popup open={popupOpen}>
               <div className="flex flex-row justify-center items-center bg-white lg:w-64 h-20 rounded-xl font-inter font-semibold text-lg text-center fixed top-60 right-14 md:top-48 md:right-40">
                 <div className="flex-shrink-0 scale-110 hidden md:block">
                   <svg
@@ -302,8 +305,8 @@ const RegisterForm = () => {
                   </svg>
                 </div>
 
-                <p className="w-3/4">Choose your team size here</p>
-                <div className="ml-4 scale-125 block md:hidden">
+                {/* <p className="w-3/4">Choose your team size here</p> */}
+            {/* <div className="ml-4 scale-125 block md:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
@@ -317,9 +320,9 @@ const RegisterForm = () => {
                   >
                     <path d="M12 19V5M5 12l7-7 7 7" />
                   </svg>
-                </div>
-              </div>
-            </Popup>
+                </div> */}
+            {/* </div> */}
+            {/* </Popup> */}
           </section>
           {/* Team member 1 */}
           <section className="mt-8 px-6 md:px-12">
@@ -351,6 +354,17 @@ const RegisterForm = () => {
               />
             </section>
           )}
+          <div className="flex justify-center p-5">
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                setMember4((prev) => !prev);
+              }}
+              className="bg-blue1 px-4 py-2 rounded-3xl text-text_col_1 font-inter font-semibold"
+            >
+              {member4 ? <p>Remove 4th Member</p> : <p>Add 4th Member</p>}
+            </button>
+          </div>
           {/* <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
             <p className="mb-2 text-xl">Upload Abstract Link</p>
             <input
