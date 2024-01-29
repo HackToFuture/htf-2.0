@@ -4,7 +4,7 @@ const Prize = () => {
   return (
     <div className="px-5 md:px-7 mb-40">
       <div className="flex flex-col justify-center bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 items-center rounded-xl px-6 md:px-10 py-12">
-        <h2 className="text-2xl md:text-4xl font-inter font-bold mb-2 ">
+        <h2 className="text-2xl md:text-4xl font-urbanist font-bold mb-2 ">
           <span className="bg-gradient-right bg-clip-text text-transparent">
             Prize Pool ₹ 2,00,000+
           </span>
@@ -24,7 +24,7 @@ const Prize = () => {
               className="aspect-auto w-64 md:w-96"
             /> */}
           </div>
-          <div className="mt-8 md:mt-0 md:p-5 w-full font-inter font-medium text-lg md:text-2xl text-text_col_1 flex flex-col">
+          <div className="mt-8 md:mt-0 md:p-5 w-full font-urbanist font-medium text-lg md:text-2xl text-text_col_1 flex flex-col">
             <div className="flex flex-col mb-12 w-full">
               <h2 className="text-2xl md:text-4xl font-bold mb-5 bg-gradient-right bg-clip-text text-transparent">
                 Company Theme

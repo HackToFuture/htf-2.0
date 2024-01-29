@@ -85,7 +85,7 @@ const Header = () => {
               <img src={htflogo} alt="logo" className="aspect-auto w-24" />
             </Link>
           </div>
-          <ul className="flex justify-center font-inter font-medium text-md">
+          <ul className="flex justify-center font-urbanist font-medium text-md">
             <li className="text-white hover:text-text_col_2 transition px-8 cursor-pointer">
               <Link
                 activeClass="active"
@@ -149,7 +149,7 @@ const Header = () => {
       )}
       {isOpen && (
         <div className="fixed top-20 right-2 h-auto w-48 py-4" id="hammenu">
-          <ul className="flex flex-col text-lg items-center font-inter font-medium text-text_col_1 ">
+          <ul className="flex flex-col text-lg items-center font-urbanist font-medium text-text_col_1 ">
             <li className="transition px-8 hover:text-black">
               <Link
                 activeClass="active"

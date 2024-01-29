@@ -24,20 +24,22 @@ export default function Abstract() {
     try {
       const colRef = collection(db, "registration");
       const snapshot = await getDocs(colRef);
-  
+
       const user_data = snapshot.docs
         .map((doc) => ({ ...doc.data(), id: doc.id }))
         .find((data) => data.lead.email === sessionStorage.getItem("email"));
-  
+
       if (!user_data) {
         setIsCurrentUserRegistered(false);
-        alert("This email is not registered.\nPlease register first to proceed");
+        alert(
+          "This email is not registered.\nPlease register first to proceed"
+        );
         navigate("/registration");
         return;
       }
-  
+
       setCurrentUserDetails(user_data);
-  
+
       if (user_data.lead.pdfLink !== undefined) {
         alert("Abstract already submitted");
         navigate("/");
@@ -46,7 +48,7 @@ export default function Abstract() {
       console.error("Error in validation:", error);
     }
   };
-  
+
   const googleAuth = () => {
     signInWithPopup(auth, provider).then((data) => {
       sessionStorage.setItem("email", data.user.email);
@@ -136,10 +138,10 @@ export default function Abstract() {
       <HeaderReg />
       <div className="flex justify-center h-auto">
         <div className="w-11/12 md:w-2/5 mt-24 md:mt-32 mb-10 pb-10 bg-bg_color bg-opacity-20 backdrop-blur-blur1">
-          <h1 className="text-center text-3xl md:text-4xl font-inter font-bold text-text_col_1 my-6">
+          <h1 className="text-center text-3xl md:text-4xl font-urbanist font-bold text-text_col_1 my-6">
             Abstract Submission
           </h1>
-          <h1 className="text-center text-2xl lg:text-3xl font-inter font-bold text-text_col_1 my-6">
+          <h1 className="text-center text-2xl lg:text-3xl font-urbanist font-bold text-text_col_1 my-6">
             Welcome, {loggedInUser || sessionStorage.getItem("name")}
           </h1>
           <p className="text-text_col_1 my-6 mx-14 text-center ">
@@ -152,7 +154,7 @@ export default function Abstract() {
               handleLinkInvalid(e);
             }}
           >
-            <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-inter font-medium text-text_col_1">
+            <section className="mx-6 md:mx-12 mt-6 mb-4 px-6 py-4 border-2 border-blue1 rounded-xl font-urbanist font-medium text-text_col_1">
               <p className="mb-2 text-xl">Upload Abstract Link</p>
               <input
                 onChange={handlePdfChange}
@@ -169,7 +171,7 @@ export default function Abstract() {
               //   // handleFormSubmission(e);
               //   submitForm();
               // }}
-              className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-inter font-semibold text-xl"
+              className="w-full bg-blue1 px-4 py-2 rounded-xl text-text_col_1 font-urbanist font-semibold text-xl"
             >
               Submit
             </button>

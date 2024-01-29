@@ -15,7 +15,7 @@ const alert = () => {
     show && (
       <>
         <div
-          className="w-11/12 md:w-3/5 h-full p-4 bg-blue-500 rounded-xl flex flex-col items-center justify-center text-white font-inter relative"
+          className="w-11/12 md:w-3/5 h-full p-4 bg-blue-500 rounded-xl flex flex-col items-center justify-center text-white font-urbanist relative"
           id="alertBanner"
         >
           <div className="flex items-center justify-center">
