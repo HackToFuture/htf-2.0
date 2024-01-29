@@ -9,7 +9,7 @@ const RegMem = ({ memData, onMemChange }) => {
         value={memData.name}
         type="text"
         placeholder="Enter Name"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <input
         required="required"
@@ -19,7 +19,7 @@ const RegMem = ({ memData, onMemChange }) => {
         value={memData.email}
         type="email"
         placeholder="Enter Email"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <select
         onChange={(e) => {
@@ -27,7 +27,7 @@ const RegMem = ({ memData, onMemChange }) => {
         }}
         value={memData.year}
         required="required"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       >
         <option
           className="text-bg_color font-semibold"
@@ -61,7 +61,7 @@ const RegMem = ({ memData, onMemChange }) => {
             checked={memData.gender === "male"}
             onChange={() => onMemChange("gender", "male")}
           />
-          <span className="font-inter font-medium text-text_col_1 ml-3">
+          <span className="font-urbanist font-medium text-text_col_1 ml-3">
             Male
           </span>
         </label>
@@ -74,7 +74,7 @@ const RegMem = ({ memData, onMemChange }) => {
             checked={memData.gender === "female"}
             onChange={() => onMemChange("gender", "female")}
           />
-          <span className="font-inter font-medium text-text_col_1 ml-3">
+          <span className="font-urbanist font-medium text-text_col_1 ml-3">
             Female
           </span>
         </label>
