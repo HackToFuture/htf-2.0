@@ -15,7 +15,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         value={leadData.teamName}
         type="text"
         placeholder="Enter Team Name"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <input
         required="required"
@@ -25,7 +25,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         value={leadData.name}
         type="text"
         placeholder="Enter Name"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <input
         required="required"
@@ -36,7 +36,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         }}
         type="email"
         // placeholder="Enter Email"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <input
         required="required"
@@ -46,7 +46,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         value={leadData.phone}
         type="text"
         placeholder="Enter Phone Number"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
         minLength={10}
         maxLength={10}
       />
@@ -56,7 +56,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         }}
         value={leadData.year}
         required
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       >
         <option
           className="text-bg_color font-semibold"
@@ -88,7 +88,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
         value={leadData.college}
         type="text"
         placeholder="Enter College Name (Enter full name with city)"
-        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-inter font-medium text-text_col_1"
+        className="w-full px-5 py-2 mb-4 rounded-lg border-2 border-blue2 bg-white bg-opacity-0 font-urbanist font-medium text-text_col_1"
       />
       <div className="flex justify-center">
         <label className="flex items-center cursor-pointer transition ease-in-out">
@@ -100,7 +100,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
             checked={leadData.gender === "male"}
             onChange={() => onLeadChange("gender", "male")}
           />
-          <span className="font-inter font-medium text-text_col_1 ml-3">
+          <span className="font-urbanist font-medium text-text_col_1 ml-3">
             Male
           </span>
         </label>
@@ -113,7 +113,7 @@ const RegLead = ({ leadData, onLeadChange }) => {
             checked={leadData.gender === "female"}
             onChange={() => onLeadChange("gender", "female")}
           />
-          <span className="font-inter font-medium text-text_col_1 ml-3">
+          <span className="font-urbanist font-medium text-text_col_1 ml-3">
             Female
           </span>
         </label>

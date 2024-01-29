@@ -16,7 +16,7 @@ const RegModal = () => {
     signInWithPopup(auth, provider).then((data) => {
       setValue(data.user.email);
       sessionStorage.setItem("email", data.user.email);
-      sessionStorage.setItem("name",data.user.displayName)
+      sessionStorage.setItem("name", data.user.displayName);
       setAuthDone(true);
       navigate("/registration");
     });
@@ -24,7 +24,7 @@ const RegModal = () => {
   return (
     <Popup
       trigger={
-        <button className="text-white bg-blue-500 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl lg:mr-6 ">
+        <button className="text-white bg-[#0097e4] transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl lg:mr-6 ">
           Register
         </button>
       }
