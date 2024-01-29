@@ -148,7 +148,10 @@ const Header = () => {
         </nav>
       )}
       {isOpen && (
-        <div className="fixed top-20 right-2 h-auto w-48 py-4" id="hammenu">
+        <div
+          className="fixed top-20 right-2 h-auto w-48 py-4 backdrop-blur-blur1  bg-bg_color_2 bg-opacity-70 rounded-xl shadow-xl flex flex-col items-center justify-center bg-blend-overlay"
+          id="hammenu"
+        >
           <ul className="flex flex-col text-lg items-center font-urbanist font-medium text-text_col_1 cursor-pointer">
             <li className="transition px-8 hover:text-black">
               <Link
@@ -200,7 +203,7 @@ const Header = () => {
             </li>
           </ul>
           <div className=" h-16 flex items-center justify-center">
-            <div className="ml-5">
+            <div className="m-5">
               {/* <button
                 onClick={(e) => googleAuth(e)}
                 className="bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-10 py-1 hover:scale-105 rounded-3xl mr-6 "
