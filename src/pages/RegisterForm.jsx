@@ -447,7 +447,7 @@ const RegisterForm = () => {
               <div className="flex flex-col justify-center items-center bg-white w-96 h-auto p-8 rounded-xl font-urbanist font-medium text-xl text-center">
                 {/* <p>Team Lead email already exists</p> */}
                 <p>You have already registered.</p>
-                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                <p>Abstract Submission is open until 04 Febraury 2024.</p>
                 {/* <p>Check your email for further information.</p> */}
                 <Link
                   to={"/submit"}
