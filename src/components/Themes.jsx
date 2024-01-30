@@ -68,6 +68,7 @@ const Themes = () => {
           <p className="p-4">
             Work on your own problem statement under the theme 'Social
             Innovation'. Open to first and second semester students of BE only.
+            Priority is given to novelty and innovation.
           </p>
         </div>
         <img
