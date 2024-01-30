@@ -27,19 +27,16 @@ const Themes = () => {
           </div>
         </div>
         <p className="p-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque,
-          suscipit ad ea non nam fuga iusto, quam accusantium repudiandae
-          perferendis vero corporis reprehenderit excepturi nemo at dignissimos
-          sit? Pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Sed illo dolor sit, nesciunt delectus possimus quia doloribus
-          ipsa nobis fuga corporis quam iste recusandae nemo error perspiciatis
-          libero doloremque mollitia. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ut cumque, suscipit ad ea non nam fuga iusto, quam
-          accusantium repudiandae perferendis vero corporis reprehenderit
-          excepturi nemo at dignissimos sit? Pariatur. Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Sed illo dolor sit, nesciunt
-          delectus possimus quia doloribus ipsa nobis fuga corporis quam iste
-          recusandae nemo error perspiciatis libero doloremque mollitia.
+          Develop a framework for leveraging machine learning to uncover
+          customer trends and behaviors while adhering to the highest standards
+          of ethical data usage. In today's rapidly evolving business landscape,
+          understanding customer preferences is crucial; however, privacy
+          concerns have taken precedence. We are actively seeking innovative
+          solutions to anonymize user identities within extensive databases,
+          enabling the responsible application of machine learning techniques.
+          Your objective is to construct a robust and privacy-centric framework
+          that enables organizations to extract valuable insights without
+          compromising individual rights.
         </p>
       </div>
       <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center ">
@@ -61,20 +58,16 @@ const Themes = () => {
         </div>
         <div className="flex flex-row justify-evenly">
           <p className="p-6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque,
-            suscipit ad ea non nam fuga iusto, quam accusantium repudiandae
-            perferendis vero corporis reprehenderit excepturi nemo at
-            dignissimos sit? Pariatur. Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Sed illo dolor sit, nesciunt delectus possimus
-            quia doloribus ipsa nobis fuga corporis quam iste recusandae nemo
-            error perspiciatis libero doloremque mollitia. Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Ut cumque, suscipit ad ea non nam
-            fuga iusto, quam accusantium repudiandae perferendis vero corporis
-            reprehenderit excepturi nemo at dignissimos sit? Pariatur. Lorem
-            ipsum dolor sit amet, consectetur adipisicing elit. Sed illo dolor
-            sit, nesciunt delectus possimus quia doloribus ipsa nobis fuga
-            corporis quam iste recusandae nemo error perspiciatis libero
-            doloremque mollitia.
+            Design a cutting-edge blockchain platform that empowers users to
+            lease their information to various services while ensuring automatic
+            and irreversible data deletion upon exiting each service. The
+            challenge is to create a seamless, transparent, and user-centric
+            system, leveraging blockchain technology to guarantee data privacy
+            and instill trust in the evolving digital landscape. Data is the new
+            oil. Your task is to architect a secure and user-friendly solution
+            that revolutionizes data transactions, providing individuals with
+            control over their information and bringing about a new era of
+            responsible data sharing.
           </p>
         </div>
       </div>
@@ -97,22 +90,19 @@ const Themes = () => {
           </div>
         </div>
         <p className="p-6">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut cumque,
-          suscipit ad ea non nam fuga iusto, quam accusantium repudiandae
-          perferendis vero corporis reprehenderit excepturi nemo at dignissimos
-          sit? Pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing
-          elit. Sed illo dolor sit, nesciunt delectus possimus quia doloribus
-          ipsa nobis fuga corporis quam iste recusandae nemo error perspiciatis
-          libero doloremque mollitia. Lorem ipsum dolor sit amet consectetur
-          adipisicing elit. Ut cumque, suscipit ad ea non nam fuga iusto, quam
-          accusantium repudiandae perferendis vero corporis reprehenderit
-          excepturi nemo at dignissimos sit? Pariatur. Lorem ipsum dolor sit
-          amet, consectetur adipisicing elit. Sed illo dolor sit, nesciunt
-          delectus possimus quia doloribus ipsa nobis fuga corporis quam iste
-          recusandae nemo error perspiciatis libero doloremque mollitia.
+          Today's reactive Cyber security leaves businesses vulnerable to unseen
+          hacking trends, with attackers exploiting novel methods tailored to
+          specific industries. Build an AI-powered solution that delves beyond
+          traditional threat feeds, analyzing hidden forums, vulnerability
+          databases, and emerging technologies to unearth nascent attack vectors
+          before they strike. By continuously learning and simulating potential
+          attack scenarios, your system be able to predict upcoming threats and
+          prioritize them based on industry relevance, enabling businesses to
+          shift from reactive defense to proactive prediction, optimized
+          security investments, and gain a competitive edge in the ever-evolving
+          threat landscape.
         </p>
       </div>
-
       <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center justify-between">
         <img
           src={laptop}
