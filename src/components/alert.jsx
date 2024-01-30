@@ -48,10 +48,12 @@ const alert = () => {
             <li>Rule Book updated.</li>
           </ul> */}
             {/* <p>
-              Registrations are open. Abstracts to be submitted by 01 February
+              Registrations are open. Abstracts to be submitted by  February
               2024.
             </p> */}
-            <p>Registration extended upto 04 Febraury 2024.</p>
+            <p>Registration Extended to 04 February 2024. Problem Statements rephrased for
+              better clarity.
+            </p>
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
             <Link
