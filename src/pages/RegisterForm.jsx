@@ -418,7 +418,7 @@ const RegisterForm = () => {
                 <p>Email will be sent shortly.</p> */}
                 <p>Registered Successfully.</p>
                 <p>Further communication will be done through email.</p>
-                <p>Abstract Submission is open until 01 Febraury 2024.</p>
+                <p>Abstract Submission is open until 04 Febraury 2024.</p>
                 <Link
                   to={"/submit"}
                   // className="border-b-2 border-blue-300 text-blue-500 font-bold"
