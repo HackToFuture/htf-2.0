@@ -7,12 +7,12 @@ import laptop from "/src/assets/laptop.png";
 const Themes = () => {
   return (
     <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-lg md:text-xl leading-tight md:leading-tight font-urbanist font-medium">
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center">
-        <div className="flex flex-row justify-evenly">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start">
+        <div className="flex md:flex-row flex-col justify-evenly">
           <img
             src={markettrend}
             alt="themelogo"
-            className="aspect-square h-24 flex-shrink-0 p-4 mt-8"
+            className="aspect-square h-24 w-24 md:h-24 flex-shrink-0 p-4 md:mt-8 "
           />
           <div>
             <h2 className=" text-2xl ml-4 font-bold bg-gradient-right bg-clip-text text-transparent">
@@ -26,7 +26,7 @@ const Themes = () => {
             </p>
           </div>
         </div>
-        <p className="p-6">
+        <p className="p-6 leading-6">
           Develop a framework for leveraging machine learning to uncover
           customer trends and behaviors while adhering to the highest standards
           of ethical data usage. In today's rapidly evolving business landscape,
@@ -39,12 +39,12 @@ const Themes = () => {
           compromising individual rights.
         </p>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center ">
-        <div className="flex flex-row justify-evenly">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start ">
+        <div className="flex md:flex-row flex-col items-start justify-start">
           <img
             src={blockchain}
             alt="themelogo"
-            className=" aspect-square h-24 flex-shrink-0 p-4 mt-8"
+            className=" aspect-square h-24 w-24 flex-shrink-0 p-4 md:mt-8 mt-4"
           />
           <div>
             <h2 className="text-2xl ml-4 font-bold bg-gradient-right bg-clip-text text-transparent">
@@ -57,7 +57,7 @@ const Themes = () => {
           </div>
         </div>
         <div className="flex flex-row justify-evenly">
-          <p className="p-6">
+          <p className="p-6 leading-6">
             Design a cutting-edge blockchain platform that empowers users to
             lease their information to various services while ensuring automatic
             and irreversible data deletion upon exiting each service. The
@@ -71,12 +71,12 @@ const Themes = () => {
           </p>
         </div>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center ">
-        <div className="flex flex-row justify-evenly">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start ">
+        <div className="flex md:flex-row flex-col justify-evenly">
           <img
             src={hacker}
             alt="themelogo"
-            className=" aspect-square h-24 flex-shrink-0 p-4 mt-8"
+            className=" aspect-square h-24 w-24 flex-shrink-0 p-4 mt-8"
           />
           <div>
             <h2 className="text-2xl ml-4 font-bold bg-gradient-right bg-clip-text text-transparent">
@@ -89,7 +89,7 @@ const Themes = () => {
             </p>
           </div>
         </div>
-        <p className="p-6">
+        <p className="p-6 leading-6">
           Today's reactive Cyber security leaves businesses vulnerable to unseen
           hacking trends, with attackers exploiting novel methods tailored to
           specific industries. Build an AI-powered solution that delves beyond
@@ -103,7 +103,7 @@ const Themes = () => {
           threat landscape.
         </p>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center justify-between">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex md:flex-row flex-col items-center justify-between">
         <img
           src={laptop}
           alt="themelogo"
