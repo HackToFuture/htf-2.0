@@ -7,7 +7,7 @@ import laptop from "/src/assets/laptop.png";
 const Themes = () => {
   return (
     <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-lg md:text-xl leading-tight md:leading-tight font-urbanist font-medium">
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start">
         <div className="flex md:flex-row flex-col justify-evenly">
           <img
             src={markettrend}
@@ -39,8 +39,8 @@ const Themes = () => {
           compromising individual rights.
         </p>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center ">
-        <div className="flex md:flex-row flex-col justify-evenly">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start ">
+        <div className="flex md:flex-row flex-col items-start justify-start">
           <img
             src={blockchain}
             alt="themelogo"
@@ -71,7 +71,7 @@ const Themes = () => {
           </p>
         </div>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-center ">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex flex-col items-start ">
         <div className="flex md:flex-row flex-col justify-evenly">
           <img
             src={hacker}
