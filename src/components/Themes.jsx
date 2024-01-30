@@ -6,7 +6,7 @@ import laptop from "/src/assets/laptop.png";
 
 const Themes = () => {
   return (
-    <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-lg md:text-xl leading-tight md:leading-tight font-urbanist font-medium">
+    <div className="h-auto lg:mx-32 my-20 text-text_col_1 text-base md:text-lg leading-tight md:leading-tight font-inter font-medium">
       <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex items-center">
         <img
           src={markettrend}
@@ -19,9 +19,10 @@ const Themes = () => {
           </h2>
 
           <p className="p-4">
-            Anonymise user identities in large databases to ethically employ
-            machine learning in understanding customer trends and behaviour
-            without violating their rights.
+            Develop an ethical and secure machine learning framework that helps
+            businesses uncover customer trends while anonymizing user
+            identities, addressing privacy concerns in today's data-driven
+            world.
           </p>
         </div>
       </div>
@@ -31,9 +32,8 @@ const Themes = () => {
             Problem Statement 2
           </h2>
           <p className="p-4">
-            Create a blockchain-powered platform allowing users to lease their
-            information to various services, with the assurance that the data
-            will not be retained upon exiting the service.
+            Design a blockchain platform for secure, automatic data leasing with
+            user-controlled deletion and built-in trust mechanisms.
           </p>
         </div>
         <img
