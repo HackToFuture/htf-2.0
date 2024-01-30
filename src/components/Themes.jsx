@@ -103,7 +103,7 @@ const Themes = () => {
           threat landscape.
         </p>
       </div>
-      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex md:flex-row flex-col items-center justify-between">
+      <div className="bg-bg_color_2 bg-opacity-20 backdrop-blur-blur1 rounded-xl mx-6 mb-6 py-10 p-4 flex md:flex-row flex-col items-start">
         <img
           src={laptop}
           alt="themelogo"
