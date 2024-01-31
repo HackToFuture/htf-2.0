@@ -9,7 +9,7 @@ const Footer = () => {
             SJEC
           </p>
         </a>
-        <p className="text-text_col_1 font-bold text-xs  w-auto bottom-11 sm:bottom-3">
+        <p className="text-text_col_1 font-bold text-xs text-center w-auto bottom-11 sm:bottom-3">
           &copy;2024 The sceptix club | All rights reserved.
         </p>
         <img
