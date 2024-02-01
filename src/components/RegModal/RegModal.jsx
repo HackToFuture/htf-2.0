@@ -90,10 +90,12 @@ const RegModal = () => {
               <div>
                 {" "} */}
             <button
-              onClick={(e) => googleAuth(e)}
+              // onClick={(e) => googleAuth(e)}
               className="text-text_col_1 bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md mb-2"
             >
-              Company Specific
+              <a href="https://unstop.com/o/dkWRzf4?lb=qiGr0ZVo">
+                Company Specific
+              </a>
             </button>
             <a
               href="https://forms.gle/9KwkqhRn3jx86eZDA"
