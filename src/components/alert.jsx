@@ -47,20 +47,22 @@ const alert = () => {
             <li>Registrations are open. Submit abstract later.</li>
             <li>Rule Book updated.</li>
           </ul> */}
-            {/* <p>
-              Registrations are open. Abstracts to be submitted by  February
-              2024.
-            </p> */}
-            <p>Registration Extended to 04 February 2024. Problem Statements rephrased for
-              better clarity.
+            <p>
+              Registrations open till 04 Feb 2024. Problem statements rephrased.
             </p>
+            {/* <p>
+              Due to a technical glitch, registrations from 10:00 PM, 31 Jan
+              2024 to 10:00 AM, 01 Feb 2024 have not been saved. If you have
+              registered in this period, or not received any e-mail from
+              hacktofuture@sjec.ac.in, please register once again.
+            </p> */}
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
             <Link
               to={"submit"}
               className="border-2 p-2 rounded border-blue-300 text-blue-100 font-bold text-xl"
             >
-              Abstract Submission
+              Abstract Submission (Company Theme)
             </Link>
           </div>
         </div>
