@@ -15,7 +15,7 @@ const alert = () => {
     show && (
       <>
         <div
-          className="w-11/12 md:w-3/5 h-full p-4 bg-[#0097e4] rounded-xl flex flex-col items-center justify-center text-white font-urbanist relative"
+          className="w-11/12 md:w-5/6 h-full p-4 bg-red-600 rounded-xl flex flex-col items-center justify-center text-white font-urbanist relative"
           id="alertBanner"
         >
           <div className="flex items-center justify-center">
@@ -51,8 +51,11 @@ const alert = () => {
               Registrations are open. Abstracts to be submitted by  February
               2024.
             </p> */}
-            <p>Registration Extended to 04 February 2024. Problem Statements rephrased for
-              better clarity.
+            <p>
+              Due to a technical glitch, registrations from 10:00 PM, 31 Jan
+              2024 to 10:00 AM, 01 Feb 2024 have not been saved. If you have
+              registered in this period, or not received any e-mail from
+              hacktofuture@sjec.ac.in, please register once again.
             </p>
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
