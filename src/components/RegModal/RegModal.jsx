@@ -5,7 +5,7 @@ import { auth, provider } from "../../config/firebase.js";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+// import ReCAPTCHA from "react-google-recaptcha";
 
 const RegModal = () => {
   const navigate = useNavigate();
@@ -82,33 +82,33 @@ const RegModal = () => {
           </div>
           <div className="actions flex flex-col justify-center mt-4">
             {/* recaptcha */}
-            <ReCAPTCHA
+            {/* <ReCAPTCHA
               sitekey="6Ld4EGMpAAAAANG1xTg96t95oz7coHx6Yvrbenn9"
               onChange={() => reCatch()}
             />
             {validate ? (
               <div>
-                {" "}
-                <button
-                  onClick={(e) => googleAuth(e)}
-                  className="text-text_col_1 bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md mb-2"
-                >
-                  Company Specific
-                </button>
-                <a
-                  href="https://forms.gle/9KwkqhRn3jx86eZDA"
-                  target="_blank"
-                  className="w-full"
-                >
-                  <button className="text-text_col_1 w-full bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md">
-                    Open theme : 1st years only
-                  </button>
-                </a>
-              </div>
-            ) : (
-              <div></div>
-            )}
-            {/* <button
+                {" "} */}
+            <button
+              onClick={(e) => googleAuth(e)}
+              className="text-text_col_1 bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md mb-2"
+            >
+              Company Specific
+            </button>
+            <a
+              href="https://forms.gle/9KwkqhRn3jx86eZDA"
+              target="_blank"
+              className="w-full"
+            >
+              <button className="text-text_col_1 w-full bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md">
+                Open theme : 1st years only
+              </button>
+            </a>
+          </div>
+          {/* ) : ( */}
+          {/* <div></div> */}
+          {/* )} */}
+          {/* <button
               onClick={(e) => googleAuth(e)}
               className="text-text_col_1 bg-bg_color_2 transition duration-300 ease-in-out text-lg font-bold px-6 py-2 hover:scale-105 rounded-md mb-2"
             >
@@ -123,8 +123,8 @@ const RegModal = () => {
                 Open theme : 1st years only
               </button>
             </a> */}
-          </div>
         </div>
+        // </div>
       )}
     </Popup>
   );
