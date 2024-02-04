@@ -41,7 +41,7 @@ export default function Abstract() {
       setCurrentUserDetails(user_data);
 
       if (user_data.lead.pdfLink !== undefined) {
-        alert("Abstract already submitted");
+        alert("Abstract Submitted");
         navigate("/");
       }
     } catch (error) {
@@ -126,6 +126,7 @@ export default function Abstract() {
       updateDoc(submit, userDetails)
         .then(() => {
           alert("Document successfully updated!");
+          navigate("/");
         })
         .catch((error) => {
           console.error("Error updating document: ", error);
