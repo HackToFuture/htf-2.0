@@ -146,8 +146,7 @@ export default function Abstract() {
             Welcome, {loggedInUser || sessionStorage.getItem("name")}
           </h1>
           <p className="text-text_col_1 my-6 mx-14 text-center ">
-            Submit your abstract link by 04 Febraury 2024. This can be done
-            later as well by logging in through same Google account.
+            Submit your abstract here. Shortlisted Team Will Be Announced On 07 February 2024.
           </p>
           <form
             action=""
