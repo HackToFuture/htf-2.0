@@ -4,14 +4,15 @@ import About from "./components/About";
 import Faq from "./components/Faq";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import HeaderReg from "./components/HeaderReg";
+// import HeaderReg from "./components/HeaderReg";
 import Hero from "./components/Hero";
 import Prize from "./components/Prize";
 import Themes from "./components/Themes";
 import sjeclogo from "./assets/SJEC_logo_with_white_letter.png";
 import eglogo from "./assets/eg-logo-red-white.png";
-import RegisterForm from "./pages/RegisterForm";
-import Abstract from "./pages/abstractsubmit";
+// import RegisterForm from "./pages/RegisterForm";
+// import Abstract from "./pages/abstractsubmit";
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
@@ -50,7 +51,7 @@ const App = () => {
                 </>
               }
             />
-            <Route
+            {/* <Route
               path="/registration"
               element={
                 <>
@@ -59,8 +60,9 @@ const App = () => {
                   <Footer />
                 </>
               }
-            />
-            <Route path="/submit" element={<Abstract />} />
+            /> */}
+            {/* <Route path="/submit" element={<Abstract />} /> */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>

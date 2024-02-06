@@ -62,12 +62,12 @@ const alert = () => {
             </p>
             <div className="mb-2" />
             {/* <p>Rule Book updated. Eligibility criteria changed.</p> */}
-            <Link
+            {/* <Link
               to={"submit"}
               className="border-2 p-2 rounded border-blue-300 text-blue-100 font-bold text-xl"
             >
               Abstract Submission (Company Theme)
-            </Link>
+            </Link> */}
           </div>
         </div>
       </>
