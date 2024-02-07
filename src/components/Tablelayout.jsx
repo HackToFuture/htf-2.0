@@ -13,11 +13,11 @@ const Tablelayout = ({ show }) => {
 
   return (
     <div>
-      <p className="text-center text-text_col_1 font-urbanist">
+      <p className="text-center text-text_col_1 font-urbanist w-full">
         The following teams have been shortlisted for {show}.
       </p>
 
-      <table className="border p-4 m-4 min-w-max">
+      <table className="border p-4 m-4 text-sm lg:text-xl ">
         <thead className="border p-2 m-2 ">
           <tr className="border ">
             {/* <th className="border p-2">S.No</th> */}
