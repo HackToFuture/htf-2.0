@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <div className="py-20 md:py-20">
       <div className="flex flex-col md:flex-row items-center px-2 md:px-0 my-4 w-full justify-center h-2/3">
-        <Alert />
+        {/* <Alert /> */}
       </div>
       <div className="flex flex-col md:flex-row items-center px-5 md:px-0 my-8 w-full">
         {/* might need to change md:w-96 later */}
