@@ -13,6 +13,7 @@ import eglogo from "./assets/eg-logo-red-white.png";
 // import RegisterForm from "./pages/RegisterForm";
 // import Abstract from "./pages/abstractsubmit";
 import NotFound from "./components/NotFound";
+import Table from "./components/Table";
 
 const App = () => {
   return (
@@ -30,6 +31,9 @@ const App = () => {
                   <Header />
                   <div id="hero">
                     <Hero />
+                  </div>
+                  <div id="shortlist" className="flex justify-center">
+                    <Table />
                   </div>
                   <div
                     id="about"
