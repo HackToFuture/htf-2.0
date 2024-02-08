@@ -10,11 +10,11 @@ const Table = () => {
   //   };
   return (
     <>
-      <div className="flex flex-col items-center justify-center m-2 bg-bg_color_2 rounded-xl p-6 text-text_col_1 font-urbanist overflow-scroll bg-opacity-40 backdrop-blur-blur1">
+      <div className="flex flex-col items-center justify-center m-1 bg-bg_color_2 rounded-xl p-6  text-text_col_1 font-urbanist overflow-scroll bg-opacity-40 backdrop-blur-blur1">
         <h1 className="lg:text-4xl text-xl font-bold text-center text-text_col_1 font-urbanist">
           Shortlisted Teams
         </h1>
-        <div className="flex  justify-between items-center p-2 m-2 mt-0 pt-0 ">
+        <div className="flex md:flex-row flex-col justify-between items-center p-2 m-2 mt-0 pt-0 ">
           <button
             className="bg-blue1 focus:bg-black text-white font-bold py-2 px-4 rounded-sm p-2 m-2 "
             onClick={() => setShow("Problem Statement 1")}
@@ -35,13 +35,13 @@ const Table = () => {
           >
             Problem Statement 3
           </button>
-          {/* <button
+          <button
             className="bg-blue1 focus:bg-black text-white font-bold py-2 px-4 rounded-sm p-2 m-2"
-            // onClick={clickHandler}
+            onClick={() => setShow("Open Theme")}
             // id="Open Theme"
           >
             Open Theme
-          </button> */}
+          </button>
         </div>
         <div className="flex flex-col items-center justify-center ">
           <Tablelayout show={show} />
