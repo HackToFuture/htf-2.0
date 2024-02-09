@@ -25,7 +25,7 @@ const PS3 = [
     college: "Nalla Malla Reddy Engineering College, Hyderabad",
   },
   {
-    lead: "Samwin Steve Pereia",
+    lead: "Samwin Steve Pereira",
     team: "Jinsei",
     college: "St Joseph Engineering College, Mangaluru",
   },

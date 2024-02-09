@@ -49,6 +49,11 @@ const PS2 = [
     team: "Team",
     college: "Sri Krishna College of Technology, Coimbatore",
   },
+  {
+    lead: "Dickson Borges",
+    team: "Binary Brainiacs",
+    college: "St Joseph Engineering College, Mangaluru",
+  },
 ];
 
 export default PS2;
